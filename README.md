@@ -7,7 +7,7 @@
 [![Language](https://img.shields.io/badge/language-Swift%203-E05C43.svg?style=flat)](https://swift.org)
 [![Twitter](https://img.shields.io/badge/twitter-@JagCesar-00ACED.svg?style=flat)](http://twitter.com/JagCesar)
 
-This is a framework for iOS and macOS to easily communicate with the vehicle API offered by Tesla. The implementation is based on [Unofficial Tesla Model S API](https://docs.timdorr.apiary.io).
+This is a framework that works with iOS, macOS, watchOS and tvOS and the purpose is to easily communicate with the vehicle API offered by Tesla. The implementation is based on [Unofficial Tesla Model S API](https://docs.timdorr.apiary.io).
 
 ## Purpose
 
