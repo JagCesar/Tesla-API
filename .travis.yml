@@ -1,0 +1,14 @@
+language: objective-c
+osx_image: xcode8.3
+xcode_sdk: iphoneos10.1
+xcode_project: Tesla-API.xcodeproj # path to your xcodeproj folder
+xcode_scheme: TeslaAPI_iOS_Tests
+
+# Automatic builds should only be performed on master
+# as well as for pull requests.
+branches:
+  only:
+  - master
+
+script:
+  - fastlane test

@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC6195E81F1C0F9D00144FD8"
+               BuildableName = "TeslaAPITests.xctest"
+               BlueprintName = "TeslaAPITests"
+               ReferencedContainer = "container:Tesla-API.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FC6195D51F1C074300144FD8"
+            BuildableName = "TeslaAPI.framework"
+            BlueprintName = "Tesla-API"
+            ReferencedContainer = "container:Tesla-API.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
