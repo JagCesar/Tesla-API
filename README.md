@@ -1,5 +1,12 @@
 # Tesla-API
 
+[![Build Status](https://www.bitrise.io/app/b4c6282d36e95749/status.svg?token=Uko7wcLVPmPuUDLSLr3stg&branch=master)](https://www.bitrise.io/app/b4c6282d36e95749)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Tesla-API](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat)](https://github.com/JagCesar/Tesla-API)
+[![License](https://img.shields.io/badge/license-MIT-AA8DF8.svg?style=flat)](https://github.com/JagCesar/Tesla-API/blob/master/LICENSE)
+[![Language](https://img.shields.io/badge/language-Swift%203-E05C43.svg?style=flat)](https://swift.org)
+[![Twitter](https://img.shields.io/badge/twitter-@JagCesar-00ACED.svg?style=flat)](http://twitter.com/JagCesar)
+
 This is a framework for iOS and macOS to easily communicate with the vehicle API offered by Tesla. The implementation is based on [Unofficial Tesla Model S API](https://docs.timdorr.apiary.io).
 
 ## Purpose
