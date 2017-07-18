@@ -7,6 +7,15 @@ public class TeslaAPI {
         case Failure(NSError)
     }
 
+    public var baseURLString: String {
+        get {
+            return WebRequest.baseURLString
+        }
+        set {
+            WebRequest.baseURLString = newValue
+        }
+    }
+
     public static let sharedInstance = TeslaAPI()
 
     private init() {

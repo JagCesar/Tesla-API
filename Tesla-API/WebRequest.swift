@@ -2,8 +2,10 @@ import Foundation
 
 class WebRequest {
 
+    static var baseURLString = "https://owner-api.teslamotors.com/"
+
     static func clientURLRequest(path: String, params: Dictionary<String, AnyObject>? = nil, accessToken: String? = nil) -> NSMutableURLRequest {
-        let request = NSMutableURLRequest(url: URL(string: "https://owner-api.teslamotors.com/"+path)!)
+        let request = NSMutableURLRequest(url: URL(string: baseURLString+path)!)
         if let params = params {
             var paramString = ""
             for (key, value) in params {
