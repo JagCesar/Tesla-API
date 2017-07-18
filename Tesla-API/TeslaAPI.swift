@@ -4,7 +4,7 @@ public class TeslaAPI {
 
     public enum Result<T> {
         case Success(T)
-        case Failure(NSError)
+        case Failure(Error)
     }
 
     public var baseURLString: String {
@@ -22,7 +22,7 @@ public class TeslaAPI {
 
     }
 
-    public func authenticate(username: String, password: String, completion: @escaping (_ success: Bool, _ response: [String: AnyObject]?) -> Void) {
+    public func authenticate(username: String, password: String, completion: @escaping (_ result: Result<[String: AnyObject]>) -> Void) {
         let loginObject = [
             "email": username,
             "password": password,
@@ -33,26 +33,26 @@ public class TeslaAPI {
         WebRequest.post(
             request: WebRequest.clientURLRequest(
                 path: "oauth/token",
-                params: loginObject as Dictionary<String, AnyObject>)) { success, response -> () in
+                params: loginObject as [String: AnyObject])) { response, error -> () in
                     DispatchQueue.main.async {
-                        if success {
-                            completion(true, response as? [String: AnyObject])
+                        if let error = error {
+                            completion(Result.Failure(error))
                         } else {
-                            completion(false, nil)
+                            completion(Result.Success(response as! [String: AnyObject]))
                         }
                     }
         }
     }
 
-    public func listVehicles(accessToken: String, completion: @escaping (_ success: Bool, _ response: [String: AnyObject?]?) -> Void) {
+    public func listVehicles(accessToken: String, completion: @escaping (Result<[String: AnyObject?]>) -> Void) {
         WebRequest.get(
             request: WebRequest.clientURLRequest(
                 path: "api/1/vehicles",
-                accessToken: accessToken)) { success, response in
-                    if success {
-                        completion(true, response as? [String: AnyObject?])
+                accessToken: accessToken)) { response, error in
+                    if let error = error {
+                        completion(Result.Failure(error))
                     } else {
-                        completion(false, nil)
+                        completion(Result.Success(response as! [String: AnyObject?]))
                     }
         }
     }

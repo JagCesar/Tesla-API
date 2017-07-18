@@ -22,11 +22,12 @@ class TeslaAPITests: XCTestCase {
     func test_Login() {
         let waitExpectation = expectation(description: "Sign in")
 
-        TeslaAPI.sharedInstance.authenticate(username: username, password: password) { success, response in
-            if success {
-                TeslaAPITests.accessToken = response!["access_token"] as! String
+        TeslaAPI.sharedInstance.authenticate(username: username, password: password) { result in
+            switch result {
+            case .Success(let response):
+                TeslaAPITests.accessToken = response["access_token"] as! String
                 waitExpectation.fulfill()
-            } else {
+            case .Failure(let error):
                 XCTFail()
             }
         }
@@ -37,10 +38,11 @@ class TeslaAPITests: XCTestCase {
     func testListVehicles() {
         let waitExpectation = expectation(description: "List vehicles")
 
-        TeslaAPI.sharedInstance.listVehicles(accessToken: TeslaAPITests.accessToken) { success, response in
-            if success {
+        TeslaAPI.sharedInstance.listVehicles(accessToken: TeslaAPITests.accessToken) { result in
+            switch result {
+            case .Success(let response):
                 waitExpectation.fulfill()
-            } else {
+            case .Failure(let error):
                 XCTFail()
             }
         }

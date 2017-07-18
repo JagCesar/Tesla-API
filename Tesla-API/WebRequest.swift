@@ -25,33 +25,35 @@ class WebRequest {
         return request
     }
 
-    static func post(request: NSMutableURLRequest, completion: @escaping (_ success: Bool, _ object: AnyObject?) -> ()) {
+    static func post(request: NSMutableURLRequest, completion: @escaping (_ response: AnyObject?, _ error: Error?) -> ()) {
         dataTask(request: request, method: "POST", completion: completion)
     }
 
-    static func put(request: NSMutableURLRequest, completion: @escaping (_ success: Bool, _ object: AnyObject?) -> ()) {
+    static func put(request: NSMutableURLRequest, completion: @escaping (_ response: AnyObject?, _ error: Error?) -> ()) {
         dataTask(request: request, method: "PUT", completion: completion)
     }
 
-    static func get(request: NSMutableURLRequest, completion: @escaping (_ success: Bool, _ object: AnyObject?) -> ()) {
+    static func get(request: NSMutableURLRequest, completion: @escaping (_ response: AnyObject?, _ error: Error?) -> ()) {
         dataTask(request: request, method: "GET", completion: completion)
     }
 
     static private func dataTask(
         request: NSMutableURLRequest,
         method: String,
-        completion: @escaping (_ success: Bool, _ object: AnyObject?) -> Void) {
+        completion: @escaping (_ response: AnyObject?, _ error: Error?) -> Void) {
         request.httpMethod = method
         let session = URLSession(configuration: URLSessionConfiguration.default)
 
         let task = session.dataTask(with: request as URLRequest) { data, response, error -> Void in
-            if let data = data {
-                let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                if let response = response as? HTTPURLResponse, 200...299 ~= response.statusCode {
-                    completion(true, json as AnyObject)
-                } else {
-                    completion(false, json as AnyObject)
-                }
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                completion(json as AnyObject, nil)
+            } catch let error {
+                completion(nil, error)
             }
         }
         task.resume()
