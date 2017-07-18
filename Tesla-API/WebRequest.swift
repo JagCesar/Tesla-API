@@ -4,6 +4,10 @@ class WebRequest {
 
     static var baseURLString = "https://owner-api.teslamotors.com/"
 
+    private init() {
+
+    }
+
     static func clientURLRequest(path: String, params: Dictionary<String, AnyObject>? = nil, accessToken: String? = nil) -> NSMutableURLRequest {
         let request = NSMutableURLRequest(url: URL(string: baseURLString+path)!)
         if let params = params {

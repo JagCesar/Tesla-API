@@ -12,6 +12,7 @@
 		FC6195E41F1C0A1300144FD8 /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6195E31F1C0A1300144FD8 /* WebRequest.swift */; };
 		FC6195EC1F1C0F9D00144FD8 /* TeslaAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6195EB1F1C0F9D00144FD8 /* TeslaAPITests.swift */; };
 		FC6195EE1F1C0F9E00144FD8 /* TeslaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6195D61F1C074300144FD8 /* TeslaAPI.framework */; };
+		FCD161571F1E6BDC003FE381 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD161561F1E6BDC003FE381 /* Vehicle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		FC6195E91F1C0F9D00144FD8 /* TeslaAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6195EB1F1C0F9D00144FD8 /* TeslaAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaAPITests.swift; sourceTree = "<group>"; };
 		FC6195ED1F1C0F9E00144FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD161561F1E6BDC003FE381 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		FC6195D81F1C074300144FD8 /* Tesla-API */ = {
 			isa = PBXGroup;
 			children = (
+				FCD161551F1E6BD2003FE381 /* Models */,
 				FC6195D91F1C074300144FD8 /* Tesla-API.h */,
 				FC6195DA1F1C074300144FD8 /* Info.plist */,
 				FC6195E11F1C077F00144FD8 /* TeslaAPI.swift */,
@@ -90,6 +93,14 @@
 				FC6195ED1F1C0F9E00144FD8 /* Info.plist */,
 			);
 			path = TeslaAPITests;
+			sourceTree = "<group>";
+		};
+		FCD161551F1E6BD2003FE381 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCD161561F1E6BDC003FE381 /* Vehicle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD161571F1E6BDC003FE381 /* Vehicle.swift in Sources */,
 				FC6195E41F1C0A1300144FD8 /* WebRequest.swift in Sources */,
 				FC6195E21F1C077F00144FD8 /* TeslaAPI.swift in Sources */,
 			);
@@ -421,6 +433,7 @@
 				FC6195F31F1C0F9E00144FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

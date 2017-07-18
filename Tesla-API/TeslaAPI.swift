@@ -44,7 +44,7 @@ public class TeslaAPI {
         }
     }
 
-    public func listVehicles(accessToken: String, completion: @escaping (Result<[String: AnyObject?]>) -> Void) {
+    public func listVehicles(accessToken: String, completion: @escaping (Result<[Vehicle]>) -> Void) {
         WebRequest.get(
             request: WebRequest.clientURLRequest(
                 path: "api/1/vehicles",
@@ -52,7 +52,9 @@ public class TeslaAPI {
                     if let error = error {
                         completion(Result.Failure(error))
                     } else {
-                        completion(Result.Success(response as! [String: AnyObject?]))
+                        let response = response!["response"] as! [[String: AnyObject]]
+                        let vehicles = response.flatMap { return Vehicle(dictionary: $0) }
+                        completion(Result.Success(vehicles))
                     }
         }
     }
