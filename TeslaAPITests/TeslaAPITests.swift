@@ -35,7 +35,7 @@ class TeslaAPITests: XCTestCase {
     }
 
     func testListVehicles() {
-        let waitExpectation = expectation(description: "Sign in")
+        let waitExpectation = expectation(description: "List vehicles")
 
         TeslaAPI.sharedInstance.listVehicles(accessToken: TeslaAPITests.accessToken) { success, response in
             if success {
