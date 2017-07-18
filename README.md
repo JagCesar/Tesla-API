@@ -23,7 +23,7 @@ Please keep in mind that this project is on-going and I haven't had time to add 
 
 ## License
 
-Copyright (c) 2014 César Pinto Castillo
+Copyright (c) 2017 César Pinto Castillo
 
 MIT License
 
