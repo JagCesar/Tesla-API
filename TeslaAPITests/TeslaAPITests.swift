@@ -2,6 +2,11 @@ import XCTest
 import TeslaAPI
 
 class TeslaAPITests: XCTestCase {
+
+    private let username: String = ""
+    private let password: String = ""
+
+    private static var accessToken: String!
     
     override func setUp() {
         super.setUp()
@@ -13,12 +18,27 @@ class TeslaAPITests: XCTestCase {
         super.tearDown()
     }
     
-    func testLogin() {
-        let signInExpectation = expectation(description: "Sign in")
+    func test_Login() {
+        let waitExpectation = expectation(description: "Sign in")
 
-        TeslaAPI.sharedInstance.authenticate(username: "username", password: "password") { success, tokenDictionary in
+        TeslaAPI.sharedInstance.authenticate(username: username, password: password) { success, response in
             if success {
-                signInExpectation.fulfill()
+                TeslaAPITests.accessToken = response!["access_token"] as! String
+                waitExpectation.fulfill()
+            } else {
+                XCTFail()
+            }
+        }
+
+        waitForExpectations(timeout: 30, handler: nil)
+    }
+
+    func testListVehicles() {
+        let waitExpectation = expectation(description: "Sign in")
+
+        TeslaAPI.sharedInstance.listVehicles(accessToken: TeslaAPITests.accessToken) { success, response in
+            if success {
+                waitExpectation.fulfill()
             } else {
                 XCTFail()
             }
