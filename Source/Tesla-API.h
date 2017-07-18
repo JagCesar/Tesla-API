@@ -6,7 +6,7 @@
 //  Copyright © 2017 JagCesar. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Tesla-API.
 FOUNDATION_EXPORT double Tesla_APIVersionNumber;

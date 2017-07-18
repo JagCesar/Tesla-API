@@ -1,5 +1,5 @@
 import XCTest
-import TeslaAPI
+@testable import TeslaAPI
 
 class TeslaAPITests: XCTestCase {
 

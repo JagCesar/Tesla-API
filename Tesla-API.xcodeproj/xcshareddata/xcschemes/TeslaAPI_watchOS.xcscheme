@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FC6195D51F1C074300144FD8"
+               BlueprintIdentifier = "FC48F9781F1E7E5800D2400B"
                BuildableName = "TeslaAPI.framework"
-               BlueprintName = "Tesla-API"
+               BlueprintName = "TeslaAPI_watchOS"
                ReferencedContainer = "container:Tesla-API.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,28 +26,10 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FC6195E81F1C0F9D00144FD8"
-               BuildableName = "TeslaAPITests.xctest"
-               BlueprintName = "TeslaAPITests"
-               ReferencedContainer = "container:Tesla-API.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FC6195D51F1C074300144FD8"
-            BuildableName = "TeslaAPI.framework"
-            BlueprintName = "Tesla-API"
-            ReferencedContainer = "container:Tesla-API.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -55,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -64,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FC6195D51F1C074300144FD8"
+            BlueprintIdentifier = "FC48F9781F1E7E5800D2400B"
             BuildableName = "TeslaAPI.framework"
-            BlueprintName = "Tesla-API"
+            BlueprintName = "TeslaAPI_watchOS"
             ReferencedContainer = "container:Tesla-API.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FC6195D51F1C074300144FD8"
+            BlueprintIdentifier = "FC48F9781F1E7E5800D2400B"
             BuildableName = "TeslaAPI.framework"
-            BlueprintName = "Tesla-API"
+            BlueprintName = "TeslaAPI_watchOS"
             ReferencedContainer = "container:Tesla-API.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

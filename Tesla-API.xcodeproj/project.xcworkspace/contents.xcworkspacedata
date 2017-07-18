@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Tesla-API.xcodeproj">
+      location = "self:/Users/jagcesar/code/jagcesar/Tesla-API/Tesla-API.xcodeproj">
    </FileRef>
 </Workspace>
