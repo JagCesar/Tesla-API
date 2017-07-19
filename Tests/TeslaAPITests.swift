@@ -10,8 +10,12 @@ class TeslaAPITests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        TeslaAPI.sharedInstance.baseURLString = "https://private-anon-0ef8526c4f-timdorr.apiary-mock.com/"
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        // This if makes sure that we never send any entered username and
+        // password (which might be real credentials) to the mocked backend.
+        if username.utf16.count == 0 && password.utf16.count == 0 {
+            TeslaAPI.sharedInstance.baseURLString = "https://private-anon-0ef8526c4f-timdorr.apiary-mock.com/"
+        }
     }
     
     override func tearDown() {
