@@ -21,6 +21,35 @@ Because of safety reasons this repo will never use 3rd party frameworks. I want 
 
 Please keep in mind that this project is on-going and I haven't had time to add or verify all functionality yet. If you have a Tesla and are willing to try out this implementation drop me a note on Twitter [@JagCesar](https://twitter.com/jagcesar) or open an Issue here on GitHub and I'll quickly throw together an example project. Open sourced of course so you know nothing weird is going on.
 
+## How to get started
+
+The best way to use this code in your project is by using [Carthage](https://github.com/carthage/carthage). If you haven't used [Carthage](https://github.com/carthage/carthage) before, follow the [Readme](https://github.com/Carthage/Carthage/blob/master/README.md) in their repo to get it up and running on your machine.
+
+Once you have [Carthage](https://github.com/carthage/carthage) installed on your machine, add `github "JagCesar/Tesla-API"` to your `Cartfile`.
+
+When you've done this, [follow the instructions](https://github.com/carthage/carthage#getting-started) on how to compile your dependencies and add them to your project.
+
+## How to use
+
+First thing you have to do is import TeslaAPI in each file where you want to use it. You do this by writing `import TeslaAPI` at the top of the file.
+
+To sign in the user and receive an authentication token you write:
+
+```
+TeslaAPI.sharedInstance.authenticate(
+    username: "username",
+    password: "password") { result in
+        switch result {
+        case .Success(let tokenDictionary):
+            // Handle success of login here.
+        case .Failure(let error):
+            // Handle error here. The error object might give you a hint what went wrong.
+        }
+}
+```
+
+The object `tokenDictionary` contains everything you need to make further requests as this user. Please note that this framework does not handle saving of this token. You have to persist this token in a way that you think makes sense. I suggest storing it in the keychain.
+
 ## License
 
 Copyright (c) 2017 César Pinto Castillo
