@@ -1,4 +1,4 @@
-# Tesla-API
+# Tesla API
 
 [![Build Status](https://www.bitrise.io/app/b4c6282d36e95749/status.svg?token=Uko7wcLVPmPuUDLSLr3stg&branch=master)](https://www.bitrise.io/app/b4c6282d36e95749)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -7,11 +7,22 @@
 [![Language](https://img.shields.io/badge/language-Swift%203-E05C43.svg?style=flat)](https://swift.org)
 [![Twitter](https://img.shields.io/badge/twitter-@JagCesar-00ACED.svg?style=flat)](http://twitter.com/JagCesar)
 
-This is a framework that works with iOS, macOS, watchOS and tvOS and the purpose is to easily communicate with the vehicle API offered by Tesla. The implementation is based on [Unofficial Tesla Model S API](https://docs.timdorr.apiary.io).
+This is a universal framework that works with:
+
+- iOS 📱
+- macOS 🖥
+- watchOS ⌚
+- tvOS 📺
+
+It handles the communication with the vehicle API offered by Tesla and offers an easy to use interface. The implementation is based on [Unofficial Tesla Model S API](https://docs.timdorr.apiary.io).
 
 ## Purpose
 
 I want to be a part of the Tesla community and since I have a lot of experience with iOS engineering I decided that this was the best way to contribute.
+
+This framework is and will always be open source. This way you can be sure there isn't anything weird going on under the hood (pun intended). And for furthery safety I will never precompile the framework and attach it to the release tags.
+
+I hope that open sourcing this will also inspire people to write awesome Tesla apps and help Tesla on their mission.
 
 ## Requirements
 
