@@ -28,8 +28,8 @@ class TeslaAPITests: XCTestCase {
 
         TeslaAPI.sharedInstance.authenticate(username: username, password: password) { result in
             switch result {
-            case .Success(let response):
-                TeslaAPITests.accessToken = response["access_token"] as! String
+            case .Success(let token):
+                TeslaAPITests.accessToken = token.accessToken
                 waitExpectation.fulfill()
             case .Failure(let error):
                 XCTFail()

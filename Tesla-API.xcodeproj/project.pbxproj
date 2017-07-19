@@ -28,6 +28,14 @@
 		FC48F9AD1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
 		FC48F9AE1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
 		FC48F9AF1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
+		FC99DFD31F1FB41400013FE9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD21F1FB41400013FE9 /* Token.swift */; };
+		FC99DFD41F1FB65A00013FE9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD21F1FB41400013FE9 /* Token.swift */; };
+		FC99DFD51F1FB65A00013FE9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD21F1FB41400013FE9 /* Token.swift */; };
+		FC99DFD61F1FB65A00013FE9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD21F1FB41400013FE9 /* Token.swift */; };
+		FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
+		FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
+		FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
+		FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
 		FCD161971F1E79F0003FE381 /* Tesla-API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD161901F1E793F003FE381 /* Tesla-API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -62,6 +70,8 @@
 		FC48F9791F1E7E5800D2400B /* TeslaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC48F9881F1E7F1500D2400B /* TeslaAPI_macOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_macOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC48F9971F1E7F2500D2400B /* TeslaAPI_tvOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_tvOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC99DFD21F1FB41400013FE9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		FC99DFD71F1FBBE100013FE9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		FCD1615D1F1E7844003FE381 /* TeslaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD1618D1F1E793F003FE381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD1618F1F1E793F003FE381 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
@@ -166,6 +176,8 @@
 		FCD1618E1F1E793F003FE381 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FC99DFD71F1FBBE100013FE9 /* Error.swift */,
+				FC99DFD21F1FB41400013FE9 /* Token.swift */,
 				FCD1618F1F1E793F003FE381 /* Vehicle.swift */,
 			);
 			path = Models;
@@ -475,6 +487,8 @@
 				FC48F9AE1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9AA1F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A61F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
+				FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */,
+				FC99DFD61F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +499,8 @@
 				FC48F9AD1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A91F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A51F1E7FB500D2400B /* TeslaAPI.swift in Sources */,
+				FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */,
+				FC99DFD51F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +511,8 @@
 				FC48F9AC1F1E7FCD00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A81F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A41F1E7FB400D2400B /* TeslaAPI.swift in Sources */,
+				FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */,
+				FC99DFD41F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +537,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC48F9AF1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
+				FC99DFD31F1FB41400013FE9 /* Token.swift in Sources */,
 				FC48F9AB1F1E7FBB00D2400B /* WebRequest.swift in Sources */,
+				FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC48F9A71F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -910,6 +930,7 @@
 				FC48F9221F1E7B6200D2400B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC48F9641F1E7E1E00D2400B /* Build configuration list for PBXNativeTarget "TeslaAPI_macOS" */ = {
 			isa = XCConfigurationList;
@@ -918,6 +939,7 @@
 				FC48F9661F1E7E1E00D2400B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC48F9711F1E7E4800D2400B /* Build configuration list for PBXNativeTarget "TeslaAPI_tvOS" */ = {
 			isa = XCConfigurationList;
@@ -926,6 +948,7 @@
 				FC48F9731F1E7E4800D2400B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC48F97E1F1E7E5800D2400B /* Build configuration list for PBXNativeTarget "TeslaAPI_watchOS" */ = {
 			isa = XCConfigurationList;
@@ -934,6 +957,7 @@
 				FC48F9801F1E7E5800D2400B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC48F9901F1E7F1500D2400B /* Build configuration list for PBXNativeTarget "TeslaAPI_macOS_Tests" */ = {
 			isa = XCConfigurationList;
@@ -942,6 +966,7 @@
 				FC48F9921F1E7F1500D2400B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC48F99F1F1E7F2500D2400B /* Build configuration list for PBXNativeTarget "TeslaAPI_tvOS_Tests" */ = {
 			isa = XCConfigurationList;
@@ -950,6 +975,7 @@
 				FC48F9A11F1E7F2500D2400B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC6195D01F1C074300144FD8 /* Build configuration list for PBXProject "Tesla-API" */ = {
 			isa = XCConfigurationList;

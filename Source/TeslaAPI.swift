@@ -22,7 +22,10 @@ public class TeslaAPI {
 
     }
 
-    public func authenticate(username: String, password: String, completion: @escaping (_ result: Result<[String: AnyObject]>) -> Void) {
+    public func authenticate(
+        username: String,
+        password: String,
+        completion: @escaping (_ result: Result<Token>) -> Void) {
         let loginObject = [
             "email": username,
             "password": password,
@@ -38,7 +41,15 @@ public class TeslaAPI {
                         if let error = error {
                             completion(Result.Failure(error))
                         } else {
-                            completion(Result.Success(response as! [String: AnyObject]))
+                            guard let responseDictionary = response as? [String: AnyObject] else {
+                                completion(Result.Failure(APIError()))
+                                return
+                            }
+                            do {
+                                try completion(Result.Success(Token(dictionary: responseDictionary)))
+                            } catch let error {
+                                completion(Result.Failure(error))
+                            }
                         }
                     }
         }
