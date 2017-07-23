@@ -37,17 +37,24 @@ public class TeslaAPI {
             request: WebRequest.clientURLRequest(
                 path: "oauth/token",
                 params: loginObject as [String: AnyObject])) { response, error -> () in
-                    DispatchQueue.main.async {
-                        if let error = error {
+                    if let error = error {
+                        DispatchQueue.main.async {
                             completion(Result.Failure(error))
-                        } else {
-                            guard let responseDictionary = response as? [String: AnyObject] else {
+                        }
+                    } else {
+                        guard let responseDictionary = response as? [String: AnyObject] else {
+                            DispatchQueue.main.async {
                                 completion(Result.Failure(APIError()))
-                                return
                             }
-                            do {
-                                try completion(Result.Success(Token(dictionary: responseDictionary)))
-                            } catch let error {
+                            return
+                        }
+                        do {
+                            let result = try Result.Success(Token(dictionary: responseDictionary))
+                            DispatchQueue.main.async {
+                                completion(result)
+                            }
+                        } catch let error {
+                            DispatchQueue.main.async {
                                 completion(Result.Failure(error))
                             }
                         }
@@ -61,11 +68,15 @@ public class TeslaAPI {
                 path: "api/1/vehicles",
                 accessToken: accessToken)) { response, error in
                     if let error = error {
-                        completion(Result.Failure(error))
+                        DispatchQueue.main.async {
+                            completion(Result.Failure(error))
+                        }
                     } else {
                         let response = response!["response"] as! [[String: AnyObject]]
                         let vehicles = response.flatMap { return Vehicle(dictionary: $0) }
-                        completion(Result.Success(vehicles))
+                        DispatchQueue.main.async {
+                            completion(Result.Success(vehicles))
+                        }
                     }
         }
     }
