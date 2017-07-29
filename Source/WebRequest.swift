@@ -1,6 +1,11 @@
 import Foundation
 
 class WebRequest {
+    enum RequestMethod: String {
+        case get = "GET"
+        case post = "POST"
+        case put = "PUT"
+    }
 
     static var baseURLString = "https://owner-api.teslamotors.com/"
 
@@ -8,7 +13,10 @@ class WebRequest {
 
     }
 
-    static func clientURLRequest(path: String, params: Dictionary<String, AnyObject>? = nil, accessToken: String? = nil) -> NSMutableURLRequest {
+    static private func clientURLRequest(
+        path: String,
+        params: [String: AnyObject]? = nil,
+        accessToken: String? = nil) -> NSMutableURLRequest {
         let request = NSMutableURLRequest(url: URL(string: baseURLString+path)!)
         if let params = params {
             var paramString = ""
@@ -29,23 +37,25 @@ class WebRequest {
         return request
     }
 
-    static func post(request: NSMutableURLRequest, completion: @escaping (_ response: AnyObject?, _ error: Error?) -> ()) {
-        dataTask(request: request, method: "POST", completion: completion)
-    }
-
-    static func put(request: NSMutableURLRequest, completion: @escaping (_ response: AnyObject?, _ error: Error?) -> ()) {
-        dataTask(request: request, method: "PUT", completion: completion)
-    }
-
-    static func get(request: NSMutableURLRequest, completion: @escaping (_ response: AnyObject?, _ error: Error?) -> ()) {
-        dataTask(request: request, method: "GET", completion: completion)
+    static public func request(
+        path: String,
+        method: RequestMethod,
+        params: [String: AnyObject]? = nil, accessToken: String? = nil,
+        completion: @escaping (_ response: AnyObject?, _ error: Error?) -> Void) {
+        dataTask(
+            request: clientURLRequest(
+                path: path,
+                params: params,
+                accessToken: accessToken),
+            method: method,
+            completion: completion)
     }
 
     static private func dataTask(
         request: NSMutableURLRequest,
-        method: String,
+        method: RequestMethod,
         completion: @escaping (_ response: AnyObject?, _ error: Error?) -> Void) {
-        request.httpMethod = method
+        request.httpMethod = method.rawValue
         let session = URLSession(configuration: URLSessionConfiguration.default)
 
         let task = session.dataTask(with: request as URLRequest) { data, response, error -> Void in

@@ -14,7 +14,7 @@ class TeslaAPITests: XCTestCase {
         // This if makes sure that we never send any entered username and
         // password (which might be real credentials) to the mocked backend.
         if username.utf16.count == 0 && password.utf16.count == 0 {
-            TeslaAPI.sharedInstance.baseURLString = "https://private-anon-0ef8526c4f-timdorr.apiary-mock.com/"
+            TeslaAPI.baseURLString = "https://private-anon-0ef8526c4f-timdorr.apiary-mock.com/"
         }
     }
     
@@ -26,12 +26,13 @@ class TeslaAPITests: XCTestCase {
     func test_Login() {
         let waitExpectation = expectation(description: "Sign in")
 
-        TeslaAPI.sharedInstance.authenticate(username: username, password: password) { result in
+        Authenticate(username: username, password: password).execute { result in
+            XCTAssert(Thread.isMainThread)
             switch result {
-            case .Success(let token):
+            case .success(let token):
                 TeslaAPITests.accessToken = token.accessToken
                 waitExpectation.fulfill()
-            case .Failure(let error):
+            case .failure(let error):
                 XCTFail()
             }
         }
@@ -42,11 +43,12 @@ class TeslaAPITests: XCTestCase {
     func testListVehicles() {
         let waitExpectation = expectation(description: "List vehicles")
 
-        TeslaAPI.sharedInstance.listVehicles(accessToken: TeslaAPITests.accessToken) { result in
+        ListVehicles(accessToken: TeslaAPITests.accessToken).execute { result in
+            XCTAssert(Thread.isMainThread)
             switch result {
-            case .Success(let response):
+            case .success(let response):
                 waitExpectation.fulfill()
-            case .Failure(let error):
+            case .failure(let error):
                 XCTFail()
             }
         }
