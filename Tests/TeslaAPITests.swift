@@ -26,7 +26,7 @@ class TeslaAPITests: XCTestCase {
     func test_Login() {
         let waitExpectation = expectation(description: "Sign in")
 
-        Authenticate(username: username, password: password).execute { result in
+        AuthenticateRequest(username: username, password: password).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
             case .success(let token):
@@ -43,7 +43,7 @@ class TeslaAPITests: XCTestCase {
     func testListVehicles() {
         let waitExpectation = expectation(description: "List vehicles")
 
-        ListVehicles(accessToken: TeslaAPITests.accessToken).execute { result in
+        ListVehiclesRequest(accessToken: TeslaAPITests.accessToken).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
             case .success(let response):

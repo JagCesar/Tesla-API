@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ListVehicles: RequestProtocol {
+public struct ListVehiclesRequest: RequestProtocol {
     typealias CompletionType = [Vehicle]
     let accessToken: String
     let path = "api/1/vehicles"

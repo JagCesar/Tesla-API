@@ -1,6 +1,6 @@
 import Foundation
 
-struct Authenticate: RequestProtocol {
+public struct AuthenticateRequest: RequestProtocol {
     typealias CompletionType = Token
     let path = "oauth/token"
     let method = WebRequest.RequestMethod.post
@@ -10,12 +10,12 @@ struct Authenticate: RequestProtocol {
     private let username: String
     private let password: String
 
-    init(username: String, password: String) {
+    public init(username: String, password: String) {
         self.username = username
         self.password = password
     }
 
-    func execute(completion: @escaping (Result<Token>) -> Void) {
+    public func execute(completion: @escaping (Result<Token>) -> Void) {
         let params: [String: AnyObject] = [
             "email": username as NSString,
             "password": password as NSString,
