@@ -32,7 +32,7 @@ class TeslaAPITests: XCTestCase {
             case .success(let token):
                 TeslaAPITests.accessToken = token.accessToken
                 waitExpectation.fulfill()
-            case .failure(let error):
+            case .failure(_):
                 XCTFail()
             }
         }
@@ -46,9 +46,9 @@ class TeslaAPITests: XCTestCase {
         ListVehiclesRequest(accessToken: TeslaAPITests.accessToken).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
-            case .success(let response):
+            case .success(_):
                 waitExpectation.fulfill()
-            case .failure(let error):
+            case .failure(_):
                 XCTFail()
             }
         }
