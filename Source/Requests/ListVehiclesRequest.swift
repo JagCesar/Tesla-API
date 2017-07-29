@@ -3,7 +3,7 @@ import Foundation
 public struct ListVehiclesRequest: RequestProtocol {
     typealias CompletionType = [Vehicle]
     let accessToken: String
-    let path = "api/1/vehicles"
+    let path = "/api/1/vehicles"
     let method = WebRequest.RequestMethod.get
 
     public init(accessToken: String) {

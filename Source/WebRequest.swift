@@ -7,8 +7,6 @@ class WebRequest {
         case put = "PUT"
     }
 
-    static var baseURLString = "https://owner-api.teslamotors.com/"
-
     private init() {
 
     }
@@ -16,8 +14,14 @@ class WebRequest {
     static private func clientURLRequest(
         path: String,
         params: [String: AnyObject]? = nil,
-        accessToken: String? = nil) -> NSMutableURLRequest {
-        let request = NSMutableURLRequest(url: URL(string: baseURLString+path)!)
+        accessToken: String? = nil) -> URLRequest {
+
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = TeslaAPI.host
+        components.path = path
+
+        var request = URLRequest(url: components.url!)
         if let params = params {
             var paramString = ""
             for (key, value) in params {
@@ -52,9 +56,10 @@ class WebRequest {
     }
 
     static private func dataTask(
-        request: NSMutableURLRequest,
+        request: URLRequest,
         method: RequestMethod,
         completion: @escaping (_ response: AnyObject?, _ error: Error?) -> Void) {
+        var request = request
         request.httpMethod = method.rawValue
         let session = URLSession(configuration: URLSessionConfiguration.default)
 

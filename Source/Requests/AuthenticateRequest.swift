@@ -2,7 +2,7 @@ import Foundation
 
 public struct AuthenticateRequest: RequestProtocol {
     typealias CompletionType = Token
-    let path = "oauth/token"
+    let path = "/oauth/token"
     let method = WebRequest.RequestMethod.post
     private let clientIdentifier = "81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384"
     private let clientSecret = "c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3"

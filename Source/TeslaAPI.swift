@@ -1,14 +1,7 @@
 import Foundation
 
 public struct TeslaAPI {
-    public static var baseURLString: String {
-        get {
-            return WebRequest.baseURLString
-        }
-        set {
-            WebRequest.baseURLString = newValue
-        }
-    }
+    public static var host = "owner-api.teslamotors.com"
 
     private init() {
 
