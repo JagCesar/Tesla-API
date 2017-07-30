@@ -28,10 +28,10 @@
 		FC48F9AD1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
 		FC48F9AE1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
 		FC48F9AF1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
-		FC80D4FD1F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D4FC1F2CE6CE0013F6DF /* RequestProtocol.swift */; };
-		FC80D4FE1F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D4FC1F2CE6CE0013F6DF /* RequestProtocol.swift */; };
-		FC80D4FF1F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D4FC1F2CE6CE0013F6DF /* RequestProtocol.swift */; };
-		FC80D5001F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D4FC1F2CE6CE0013F6DF /* RequestProtocol.swift */; };
+		FC75EC491F2E068C007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
+		FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
+		FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
+		FC75EC4C1F2E068E007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
 		FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
 		FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
 		FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
@@ -82,7 +82,7 @@
 		FC48F9791F1E7E5800D2400B /* TeslaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC48F9881F1E7F1500D2400B /* TeslaAPI_macOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_macOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC48F9971F1E7F2500D2400B /* TeslaAPI_tvOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_tvOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC80D4FC1F2CE6CE0013F6DF /* RequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		FC75EC481F2E0678007ED697 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVehiclesRequest.swift; sourceTree = "<group>"; };
 		FC99DFD21F1FB41400013FE9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		FC99DFD71F1FBBE100013FE9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -176,12 +176,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FC75EC471F2E0678007ED697 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FC75EC481F2E0678007ED697 /* RequestProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		FC80D4FB1F2CE62F0013F6DF /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */,
 				FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */,
-				FC80D4FC1F2CE6CE0013F6DF /* RequestProtocol.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 		FCD1618C1F1E793F003FE381 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				FC75EC471F2E0678007ED697 /* Protocols */,
 				FC80D4FB1F2CE62F0013F6DF /* Requests */,
 				FCD1618D1F1E793F003FE381 /* Info.plist */,
 				FCD1618E1F1E793F003FE381 /* Models */,
@@ -513,7 +521,7 @@
 				FC48F9AE1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9AA1F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A61F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
-				FC80D4FE1F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */,
+				FC75EC4C1F2E068E007ED697 /* RequestProtocol.swift in Sources */,
 				FCE946481F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */,
@@ -528,7 +536,7 @@
 				FC48F9AD1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A91F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A51F1E7FB500D2400B /* TeslaAPI.swift in Sources */,
-				FC80D4FF1F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */,
+				FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */,
 				FCE946491F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */,
@@ -543,7 +551,7 @@
 				FC48F9AC1F1E7FCD00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A81F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A41F1E7FB400D2400B /* TeslaAPI.swift in Sources */,
-				FC80D5001F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */,
+				FC75EC491F2E068C007ED697 /* RequestProtocol.swift in Sources */,
 				FCE9464A1F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5051F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */,
@@ -574,7 +582,7 @@
 				FC48F9AF1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC99DFD31F1FB41400013FE9 /* Token.swift in Sources */,
 				FC48F9AB1F1E7FBB00D2400B /* WebRequest.swift in Sources */,
-				FC80D4FD1F2CE6CE0013F6DF /* RequestProtocol.swift in Sources */,
+				FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */,
 				FCE946471F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */,
