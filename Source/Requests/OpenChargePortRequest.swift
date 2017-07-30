@@ -9,7 +9,12 @@ public struct OpenChargePortRequest: RequestProtocol {
     let accessToken: String
     let vehicleIdentifier: Int
 
-    func execute(completion: @escaping (Result<Bool>) -> Void) {
+    public init(accessToken: String, vehicleIdentifier: Int) {
+        self.accessToken = accessToken
+        self.vehicleIdentifier = vehicleIdentifier
+    }
+
+    public func execute(completion: @escaping (Result<Bool>) -> Void) {
         WebRequest.request(
             path: path,
             method: method) { response, error in

@@ -1,7 +1,7 @@
 import Foundation
 
 public struct LockRequest: RequestProtocol {
-    enum LockState {
+    public enum LockState {
         case lock
         case unlock
     }
@@ -19,7 +19,13 @@ public struct LockRequest: RequestProtocol {
     let vehicleIdentifier: Int
     let state: LockState
 
-    func execute(completion: @escaping (Result<Bool>) -> Void) {
+    public init(accessToken: String, vehicleIdentifier: Int, state: LockState) {
+        self.accessToken = accessToken
+        self.vehicleIdentifier = vehicleIdentifier
+        self.state = state
+    }
+
+    public func execute(completion: @escaping (Result<Bool>) -> Void) {
         WebRequest.request(
             path: path,
             method: method,
