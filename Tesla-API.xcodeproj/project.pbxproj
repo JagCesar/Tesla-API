@@ -36,6 +36,10 @@
 		FC75EC541F2E4F2F007ED697 /* LockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC521F2E4AD7007ED697 /* LockRequest.swift */; };
 		FC75EC551F2E4F30007ED697 /* LockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC521F2E4AD7007ED697 /* LockRequest.swift */; };
 		FC75EC561F2E4F30007ED697 /* LockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC521F2E4AD7007ED697 /* LockRequest.swift */; };
+		FC75EC581F2E613A007ED697 /* OpenChargePortRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */; };
+		FC75EC591F2E6219007ED697 /* OpenChargePortRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */; };
+		FC75EC5A1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */; };
+		FC75EC5B1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */; };
 		FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
 		FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
 		FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
@@ -88,6 +92,7 @@
 		FC48F9971F1E7F2500D2400B /* TeslaAPI_tvOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_tvOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC75EC481F2E0678007ED697 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		FC75EC521F2E4AD7007ED697 /* LockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockRequest.swift; sourceTree = "<group>"; };
+		FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenChargePortRequest.swift; sourceTree = "<group>"; };
 		FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVehiclesRequest.swift; sourceTree = "<group>"; };
 		FC99DFD21F1FB41400013FE9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		FC99DFD71F1FBBE100013FE9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 				FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */,
 				FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */,
 				FC75EC521F2E4AD7007ED697 /* LockRequest.swift */,
+				FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 				FCE946481F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */,
+				FC75EC591F2E6219007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC99DFD61F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +555,7 @@
 				FCE946491F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */,
+				FC75EC5A1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC99DFD51F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +572,7 @@
 				FCE9464A1F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5051F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */,
+				FC75EC5B1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC99DFD41F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,6 +605,7 @@
 				FC75EC531F2E4AD7007ED697 /* LockRequest.swift in Sources */,
 				FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */,
+				FC75EC581F2E613A007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC48F9A71F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

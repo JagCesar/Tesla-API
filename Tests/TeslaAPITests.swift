@@ -91,4 +91,21 @@ class TeslaAPITests: XCTestCase {
         }
         waitForExpectations(timeout: 30, handler: nil)
     }
+
+    func testOpenChargePort() {
+        let waitExpectation = expectation(description: "Open charge port")
+
+        OpenChargePortRequest(
+            accessToken: TeslaAPITests.accessToken,
+            vehicleIdentifier: 1).execute { result in
+                XCTAssert(Thread.isMainThread)
+                switch result {
+                case .success(_):
+                    waitExpectation.fulfill()
+                case .failure(_):
+                    XCTFail()
+                }
+        }
+        waitForExpectations(timeout: 30, handler: nil)
+    }
 }
