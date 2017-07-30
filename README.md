@@ -30,7 +30,7 @@ Because of safety reasons this repo will never use 3rd party frameworks. I want 
 
 ## Status
 
-Please keep in mind that this project is on-going and I haven't had time to add or verify all functionality yet. If you have a Tesla and are willing to try out this implementation drop me a note on Twitter [@JagCesar](https://twitter.com/jagcesar) or open an Issue here on GitHub and I'll quickly throw together an example project. Open sourced of course so you know nothing weird is going on.
+Please keep in mind that this project is on-going and I haven't had time to add or verify all functionality yet. If you have a Tesla and are willing to try out this implementation drop me a note on Twitter [@JagCesar](https://twitter.com/jagcesar) or open an Issue here on GitHub and I'll quickly throw together an example project.
 
 ## How to get started
 
@@ -42,24 +42,28 @@ When you've done this, [follow the instructions](https://github.com/carthage/car
 
 ## How to use
 
-First thing you have to do is import TeslaAPI in each file where you want to use it. You do this by writing `import TeslaAPI` at the top of the file.
+First thing you have to do is import `TeslaAPI` in each file where you want to use it. You do this by writing `import TeslaAPI` at the top of the file.
 
-To sign in the user and receive an authentication token you write:
+To sign in and receive an authentication token you write:
 
 ```
-TeslaAPI.sharedInstance.authenticate(
-    username: "username",
-    password: "password") { result in
-        switch result {
-        case .Success(let tokenDictionary):
+AuthenticateRequest(
+    username: username,
+    password: password).execute { result in
+    switch result {
+        case .success(let token):
             // Handle success of login here.
-        case .Failure(let error):
+        case .failure(let error):
             // Handle error here. The error object might give you a hint what went wrong.
-        }
+    }
 }
 ```
 
-The object `tokenDictionary` contains everything you need to make further requests as this user. Please note that this framework does not handle saving of this token. You have to persist this token in a way that you think makes sense. I suggest storing it in the keychain.
+The object `token` given in the `.success` case contains everything you need to make further requests as this user. Please note that this framework does not handle saving of this token. You have to persist this token in a way that you think makes sense. I suggest storing it in the keychain.
+
+## Are there any other requests?
+
+I'll continuously add support for more endpoints, and I encourage you to submit PR's and help me. If you want to see which endpoints are currently available [you'll find them all here](https://github.com/JagCesar/Tesla-API/tree/master/Source/Requests).
 
 ## License
 
