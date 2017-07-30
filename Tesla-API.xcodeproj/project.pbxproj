@@ -32,6 +32,10 @@
 		FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
 		FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
 		FC75EC4C1F2E068E007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
+		FC75EC531F2E4AD7007ED697 /* LockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC521F2E4AD7007ED697 /* LockRequest.swift */; };
+		FC75EC541F2E4F2F007ED697 /* LockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC521F2E4AD7007ED697 /* LockRequest.swift */; };
+		FC75EC551F2E4F30007ED697 /* LockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC521F2E4AD7007ED697 /* LockRequest.swift */; };
+		FC75EC561F2E4F30007ED697 /* LockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC521F2E4AD7007ED697 /* LockRequest.swift */; };
 		FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
 		FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
 		FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */; };
@@ -83,6 +87,7 @@
 		FC48F9881F1E7F1500D2400B /* TeslaAPI_macOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_macOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC48F9971F1E7F2500D2400B /* TeslaAPI_tvOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_tvOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC75EC481F2E0678007ED697 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		FC75EC521F2E4AD7007ED697 /* LockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockRequest.swift; sourceTree = "<group>"; };
 		FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVehiclesRequest.swift; sourceTree = "<group>"; };
 		FC99DFD21F1FB41400013FE9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		FC99DFD71F1FBBE100013FE9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -189,6 +194,7 @@
 			children = (
 				FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */,
 				FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */,
+				FC75EC521F2E4AD7007ED697 /* LockRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 				FC48F9AA1F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A61F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
 				FC75EC4C1F2E068E007ED697 /* RequestProtocol.swift in Sources */,
+				FC75EC541F2E4F2F007ED697 /* LockRequest.swift in Sources */,
 				FCE946481F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */,
@@ -537,6 +544,7 @@
 				FC48F9A91F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A51F1E7FB500D2400B /* TeslaAPI.swift in Sources */,
 				FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */,
+				FC75EC551F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE946491F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */,
@@ -552,6 +560,7 @@
 				FC48F9A81F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A41F1E7FB400D2400B /* TeslaAPI.swift in Sources */,
 				FC75EC491F2E068C007ED697 /* RequestProtocol.swift in Sources */,
+				FC75EC561F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE9464A1F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC80D5051F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */,
@@ -584,6 +593,7 @@
 				FC48F9AB1F1E7FBB00D2400B /* WebRequest.swift in Sources */,
 				FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */,
 				FCE946471F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
+				FC75EC531F2E4AD7007ED697 /* LockRequest.swift in Sources */,
 				FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC48F9A71F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
