@@ -6,8 +6,21 @@ class TeslaAPITests: XCTestCase {
     private let username: String = ""
     private let password: String = ""
 
-    private static var accessToken: String!
-    
+    internal static var accessToken: String!
+
+    internal let vehicleMock = Vehicle(
+        dictionary: [
+            "color": "" as AnyObject,
+            "dictionary": "" as AnyObject,
+            "id": 0 as AnyObject,
+            "option_codes": [""] as AnyObject,
+            "user_id": 0 as AnyObject,
+            "vehicle_id": 0 as AnyObject,
+            "vin": "" as AnyObject,
+            "tokens": [""] as AnyObject,
+            "state": "online" as AnyObject
+            ])!
+
     override func setUp() {
         super.setUp()
 
@@ -17,7 +30,7 @@ class TeslaAPITests: XCTestCase {
             TeslaAPI.host = "private-anon-0ef8526c4f-timdorr.apiary-mock.com"
         }
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
