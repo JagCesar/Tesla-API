@@ -6,20 +6,7 @@ class TeslaAPITests: XCTestCase {
     private let username: String = ""
     private let password: String = ""
 
-    internal static var accessToken: String!
-
-    internal let vehicleMock = Vehicle(
-        dictionary: [
-            "color": "" as AnyObject,
-            "dictionary": "" as AnyObject,
-            "id": 0 as AnyObject,
-            "option_codes": [""] as AnyObject,
-            "user_id": 0 as AnyObject,
-            "vehicle_id": 0 as AnyObject,
-            "vin": "" as AnyObject,
-            "tokens": [""] as AnyObject,
-            "state": "online" as AnyObject
-            ])!
+    internal var token: Token = ModelMocks.token
 
     override func setUp() {
         super.setUp()
@@ -30,95 +17,21 @@ class TeslaAPITests: XCTestCase {
             TeslaAPI.host = "private-anon-0ef8526c4f-timdorr.apiary-mock.com"
         }
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
     
     func test_Login() {
         let waitExpectation = expectation(description: "Sign in")
 
-        AuthenticateRequest(username: username, password: password).execute { result in
+        AuthenticateRequest(username: username, password: password).execute { [weak self] result in
             XCTAssert(Thread.isMainThread)
             switch result {
             case .success(let token):
-                TeslaAPITests.accessToken = token.accessToken
+                self?.token = token
                 waitExpectation.fulfill()
             case .failure(_):
                 XCTFail()
             }
         }
 
-        waitForExpectations(timeout: 30, handler: nil)
-    }
-
-    func testListVehicles() {
-        let waitExpectation = expectation(description: "List vehicles")
-
-        ListVehiclesRequest(accessToken: TeslaAPITests.accessToken).execute { result in
-            XCTAssert(Thread.isMainThread)
-            switch result {
-            case .success(_):
-                waitExpectation.fulfill()
-            case .failure(_):
-                XCTFail()
-            }
-        }
-
-        waitForExpectations(timeout: 30, handler: nil)
-    }
-
-    func testLock() {
-        let waitExpectation = expectation(description: "Lock")
-
-        LockRequest(
-            accessToken: TeslaAPITests.accessToken,
-            vehicleIdentifier: 1,
-            state: .lock).execute { result in
-                XCTAssert(Thread.isMainThread)
-                switch result {
-                case .success(_):
-                    waitExpectation.fulfill()
-                case .failure(_):
-                    XCTFail()
-                }
-        }
-        waitForExpectations(timeout: 30, handler: nil)
-    }
-
-    func testUnlock() {
-        let waitExpectation = expectation(description: "Unlock")
-
-        LockRequest(
-            accessToken: TeslaAPITests.accessToken,
-            vehicleIdentifier: 1,
-            state: .unlock).execute { result in
-                XCTAssert(Thread.isMainThread)
-                switch result {
-                case .success(_):
-                    waitExpectation.fulfill()
-                case .failure(_):
-                    XCTFail()
-                }
-        }
-        waitForExpectations(timeout: 30, handler: nil)
-    }
-
-    func testOpenChargePort() {
-        let waitExpectation = expectation(description: "Open charge port")
-
-        OpenChargePortRequest(
-            accessToken: TeslaAPITests.accessToken,
-            vehicleIdentifier: 1).execute { result in
-                XCTAssert(Thread.isMainThread)
-                switch result {
-                case .success(_):
-                    waitExpectation.fulfill()
-                case .failure(_):
-                    XCTFail()
-                }
-        }
         waitForExpectations(timeout: 30, handler: nil)
     }
 }

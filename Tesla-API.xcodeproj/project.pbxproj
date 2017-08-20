@@ -11,9 +11,21 @@
 		FC1B80981F498A2E00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */; };
 		FC1B80991F498A2F00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */; };
 		FC1B809A1F498A3000D24310 /* MobileEnabledForVehicleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */; };
-		FC1B809C1F498A8700D24310 /* MobileEnabledForRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B809B1F498A8700D24310 /* MobileEnabledForRequestTests.swift */; };
-		FC1B809D1F498A8700D24310 /* MobileEnabledForRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B809B1F498A8700D24310 /* MobileEnabledForRequestTests.swift */; };
-		FC1B809E1F498A8700D24310 /* MobileEnabledForRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B809B1F498A8700D24310 /* MobileEnabledForRequestTests.swift */; };
+		FC27C97A1F4993E10064E1AE /* ModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9791F4993E10064E1AE /* ModelMocks.swift */; };
+		FC27C97B1F4993E10064E1AE /* ModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9791F4993E10064E1AE /* ModelMocks.swift */; };
+		FC27C97C1F4993E10064E1AE /* ModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9791F4993E10064E1AE /* ModelMocks.swift */; };
+		FC27C9821F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C97E1F4995240064E1AE /* ListVehiclesRequestTests.swift */; };
+		FC27C9831F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C97E1F4995240064E1AE /* ListVehiclesRequestTests.swift */; };
+		FC27C9841F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C97E1F4995240064E1AE /* ListVehiclesRequestTests.swift */; };
+		FC27C9851F4995240064E1AE /* LockRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C97F1F4995240064E1AE /* LockRequestTests.swift */; };
+		FC27C9861F4995240064E1AE /* LockRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C97F1F4995240064E1AE /* LockRequestTests.swift */; };
+		FC27C9871F4995240064E1AE /* LockRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C97F1F4995240064E1AE /* LockRequestTests.swift */; };
+		FC27C9881F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */; };
+		FC27C9891F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */; };
+		FC27C98A1F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */; };
+		FC27C98B1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */; };
+		FC27C98C1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */; };
+		FC27C98D1F4995250064E1AE /* OpenChargePortRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */; };
 		FC48F91D1F1E7B6200D2400B /* TeslaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD1615D1F1E7844003FE381 /* TeslaAPI.framework */; };
 		FC48F9501F1E7BB100D2400B /* TeslaAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD161951F1E79C3003FE381 /* TeslaAPITests.swift */; };
 		FC48F9811F1E7EB000D2400B /* Tesla-API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD161901F1E793F003FE381 /* Tesla-API.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,7 +104,11 @@
 
 /* Begin PBXFileReference section */
 		FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileEnabledForVehicleRequest.swift; sourceTree = "<group>"; };
-		FC1B809B1F498A8700D24310 /* MobileEnabledForRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileEnabledForRequestTests.swift; sourceTree = "<group>"; };
+		FC27C9791F4993E10064E1AE /* ModelMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMocks.swift; sourceTree = "<group>"; };
+		FC27C97E1F4995240064E1AE /* ListVehiclesRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVehiclesRequestTests.swift; sourceTree = "<group>"; };
+		FC27C97F1F4995240064E1AE /* LockRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockRequestTests.swift; sourceTree = "<group>"; };
+		FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileEnabledForRequestTests.swift; sourceTree = "<group>"; };
+		FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenChargePortRequestTests.swift; sourceTree = "<group>"; };
 		FC48F9181F1E7B6200D2400B /* TeslaAPI_iOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaAPI_iOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC48F95F1F1E7E1E00D2400B /* TeslaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC48F96C1F1E7E4800D2400B /* TeslaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +188,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC27C97D1F4995070064E1AE /* Request Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FC27C97E1F4995240064E1AE /* ListVehiclesRequestTests.swift */,
+				FC27C97F1F4995240064E1AE /* LockRequestTests.swift */,
+				FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */,
+				FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */,
+			);
+			path = "Request Tests";
+			sourceTree = "<group>";
+		};
 		FC6195CC1F1C074300144FD8 = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				FCD161941F1E79C3003FE381 /* Info.plist */,
+				FC27C9791F4993E10064E1AE /* ModelMocks.swift */,
+				FC27C97D1F4995070064E1AE /* Request Tests */,
 				FCD161951F1E79C3003FE381 /* TeslaAPITests.swift */,
-				FC1B809B1F498A8700D24310 /* MobileEnabledForRequestTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -533,8 +561,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC27C98B1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FC27C9821F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
+				FC27C97A1F4993E10064E1AE /* ModelMocks.swift in Sources */,
+				FC27C9851F4995240064E1AE /* LockRequestTests.swift in Sources */,
+				FC27C9881F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
 				FC48F9501F1E7BB100D2400B /* TeslaAPITests.swift in Sources */,
-				FC1B809C1F498A8700D24310 /* MobileEnabledForRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,8 +628,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC27C98C1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FC27C9831F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
+				FC27C97B1F4993E10064E1AE /* ModelMocks.swift in Sources */,
+				FC27C9861F4995240064E1AE /* LockRequestTests.swift in Sources */,
+				FC27C9891F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
 				FC48F9A21F1E7F7300D2400B /* TeslaAPITests.swift in Sources */,
-				FC1B809D1F498A8700D24310 /* MobileEnabledForRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,8 +641,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC27C98D1F4995250064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FC27C9841F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
+				FC27C97C1F4993E10064E1AE /* ModelMocks.swift in Sources */,
+				FC27C9871F4995240064E1AE /* LockRequestTests.swift in Sources */,
+				FC27C98A1F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
 				FC48F9A31F1E7F7400D2400B /* TeslaAPITests.swift in Sources */,
-				FC1B809E1F498A8700D24310 /* MobileEnabledForRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
