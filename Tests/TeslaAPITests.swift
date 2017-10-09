@@ -6,7 +6,7 @@ class TeslaAPITests: XCTestCase {
     private let username: String = ""
     private let password: String = ""
 
-    internal var token: Token = ModelMocks.token
+    static var token: Token = ModelMocks.token
 
     override func setUp() {
         super.setUp()
@@ -14,18 +14,19 @@ class TeslaAPITests: XCTestCase {
         // This if makes sure that we never send any entered username and
         // password (which might be real credentials) to the mocked backend.
         if username.utf16.count == 0 && password.utf16.count == 0 {
-            TeslaAPI.host = "private-anon-0ef8526c4f-timdorr.apiary-mock.com"
+            // Set the url to the mocked api available on this URL http://docs.timdorr.apiary.io
+            TeslaAPI.host = "private-anon-99837c6056-timdorr.apiary-mock.com"
         }
     }
     
     func test_Login() {
         let waitExpectation = expectation(description: "Sign in")
 
-        AuthenticateRequest(username: username, password: password).execute { [weak self] result in
+        AuthenticateRequest(username: username, password: password).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
             case .success(let token):
-                self?.token = token
+                TeslaAPITests.token = token
                 waitExpectation.fulfill()
             case .failure(_):
                 XCTFail()

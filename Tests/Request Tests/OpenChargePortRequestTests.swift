@@ -6,7 +6,7 @@ extension TeslaAPITests {
         let waitExpectation = expectation(description: "Open charge port")
 
         OpenChargePortRequest(
-            accessToken: token.accessToken,
+            accessToken: TeslaAPITests.token.accessToken,
             vehicleIdentifier: 1).execute { result in
                 XCTAssert(Thread.isMainThread)
                 switch result {

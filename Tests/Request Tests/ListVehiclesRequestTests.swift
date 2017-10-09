@@ -5,7 +5,7 @@ extension TeslaAPITests {
     func testListVehicles() {
         let waitExpectation = expectation(description: "List vehicles")
 
-        ListVehiclesRequest(accessToken: token.accessToken).execute { result in
+        ListVehiclesRequest(accessToken: TeslaAPITests.token.accessToken).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
             case .success(_):

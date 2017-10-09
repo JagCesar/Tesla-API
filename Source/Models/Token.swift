@@ -1,7 +1,7 @@
 import Foundation
 
 public class Token {
-    let accessToken: String
+    public let accessToken: String
     let type: String
     let expires: Date
     let created: Date

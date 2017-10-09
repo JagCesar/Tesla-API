@@ -15,13 +15,12 @@ class ModelMocks {
     static let vehicle = Vehicle(
         dictionary: [
             "color": "" as AnyObject,
-            "dictionary": "" as AnyObject,
             "id": 0 as AnyObject,
-            "option_codes": [""] as AnyObject,
-            "user_id": 0 as AnyObject,
+            "option_codes": "" as AnyObject,
             "vehicle_id": 0 as AnyObject,
             "vin": "" as AnyObject,
             "tokens": [""] as AnyObject,
-            "state": "online" as AnyObject
+            "state": "online" as AnyObject,
+            "display_name": "Zeus" as AnyObject,
         ])!
 }

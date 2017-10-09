@@ -6,7 +6,7 @@ extension TeslaAPITests {
         let waitExpectation = expectation(description: "Lock")
 
         LockRequest(
-            accessToken: token.accessToken,
+            accessToken: TeslaAPITests.token.accessToken,
             vehicleIdentifier: 1,
             state: .lock).execute { result in
                 XCTAssert(Thread.isMainThread)
@@ -24,7 +24,7 @@ extension TeslaAPITests {
         let waitExpectation = expectation(description: "Unlock")
 
         LockRequest(
-            accessToken: token.accessToken,
+            accessToken: TeslaAPITests.token.accessToken,
             vehicleIdentifier: 1,
             state: .unlock).execute { result in
                 XCTAssert(Thread.isMainThread)
