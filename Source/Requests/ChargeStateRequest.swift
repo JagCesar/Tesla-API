@@ -1,11 +1,11 @@
 import Foundation
 
-public struct OpenChargePortRequest: RequestProtocol {
-    typealias CompletionType = Bool
+public struct ChargeStateRequest: RequestProtocol {
+    typealias CompletionType = ChargeState
     var path: String {
-        return "/api/1/vehicles/\(vehicleIdentifier)/command/charge_port_door_open"
+        return "/api/1/vehicles/\(vehicleIdentifier)/data_request/charge_state"
     }
-    let method = WebRequest.RequestMethod.post
+    let method = WebRequest.RequestMethod.get
     let accessToken: String
     let vehicleIdentifier: Int
 
@@ -14,7 +14,7 @@ public struct OpenChargePortRequest: RequestProtocol {
         self.vehicleIdentifier = vehicleIdentifier
     }
 
-    public func execute(completion: @escaping (Result<Bool>) -> Void) {
+    public func execute(completion: @escaping (Result<ChargeState>) -> Void) {
         WebRequest.request(
             path: path,
             method: method,
@@ -24,9 +24,9 @@ public struct OpenChargePortRequest: RequestProtocol {
                         completion(Result.failure(error))
                     }
                 } else if let response = response as? [String: [String: Any]],
-                    let resultBool = response["response"]?["result"] as? Bool {
+                    let dictionary = response["response"] {
                     DispatchQueue.main.async {
-                        completion(Result.success(resultBool))
+                        completion(Result.success(ChargeState(dictionary: dictionary)))
                     }
                 } else {
                     DispatchQueue.main.async {

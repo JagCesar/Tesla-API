@@ -7,6 +7,12 @@ class TeslaAPITests: XCTestCase {
     private let password: String = ""
 
     static var token: Token = ModelMocks.token
+    static var accessToken: String {
+        return token.accessToken
+    }
+    static var vehicleIdentifier: Int {
+        return 1
+    }
 
     override func setUp() {
         super.setUp()

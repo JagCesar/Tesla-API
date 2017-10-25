@@ -72,6 +72,15 @@
 		FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
 		FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
 		FCD161971F1E79F0003FE381 /* Tesla-API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD161901F1E793F003FE381 /* Tesla-API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCE825FC1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */; };
+		FCE825FD1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */; };
+		FCE825FE1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */; };
+		FCE825FF1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */; };
+		FCE826011F8C075C00B72C08 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE826001F8C075C00B72C08 /* ChargeState.swift */; };
+		FCE826021F8C075C00B72C08 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE826001F8C075C00B72C08 /* ChargeState.swift */; };
+		FCE826031F8C075C00B72C08 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE826001F8C075C00B72C08 /* ChargeState.swift */; };
+		FCE826041F8C075C00B72C08 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE826001F8C075C00B72C08 /* ChargeState.swift */; };
+		FCE826061F8C092C00B72C08 /* ChargeStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */; };
 		FCE946471F2CF10E004913FC /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */; };
 		FCE946481F2CF10E004913FC /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */; };
 		FCE946491F2CF10E004913FC /* AuthenticateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */; };
@@ -129,6 +138,9 @@
 		FCD161921F1E793F003FE381 /* WebRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequest.swift; sourceTree = "<group>"; };
 		FCD161941F1E79C3003FE381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD161951F1E79C3003FE381 /* TeslaAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaAPITests.swift; sourceTree = "<group>"; };
+		FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeStateRequest.swift; sourceTree = "<group>"; };
+		FCE826001F8C075C00B72C08 /* ChargeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeState.swift; sourceTree = "<group>"; };
+		FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeStateRequestTests.swift; sourceTree = "<group>"; };
 		FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +207,7 @@
 				FC27C97F1F4995240064E1AE /* LockRequestTests.swift */,
 				FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */,
 				FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */,
+				FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */,
 			);
 			path = "Request Tests";
 			sourceTree = "<group>";
@@ -238,6 +251,7 @@
 				FC75EC521F2E4AD7007ED697 /* LockRequest.swift */,
 				FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */,
 				FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */,
+				FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -259,6 +273,7 @@
 		FCD1618E1F1E793F003FE381 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FCE826001F8C075C00B72C08 /* ChargeState.swift */,
 				FC99DFD71F1FBBE100013FE9 /* Error.swift */,
 				FC99DFD21F1FB41400013FE9 /* Token.swift */,
 				FCD1618F1F1E793F003FE381 /* Vehicle.swift */,
@@ -563,6 +578,7 @@
 			files = (
 				FC27C98B1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
 				FC27C9821F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
+				FCE826061F8C092C00B72C08 /* ChargeStateRequestTests.swift in Sources */,
 				FC27C97A1F4993E10064E1AE /* ModelMocks.swift in Sources */,
 				FC27C9851F4995240064E1AE /* LockRequestTests.swift in Sources */,
 				FC27C9881F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
@@ -577,10 +593,12 @@
 				FC48F9AE1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9AA1F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A61F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
+				FCE825FD1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4C1F2E068E007ED697 /* RequestProtocol.swift in Sources */,
 				FC75EC541F2E4F2F007ED697 /* LockRequest.swift in Sources */,
 				FCE946481F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B80981F498A2E00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCE826021F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC591F2E6219007ED697 /* OpenChargePortRequest.swift in Sources */,
@@ -595,10 +613,12 @@
 				FC48F9AD1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A91F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A51F1E7FB500D2400B /* TeslaAPI.swift in Sources */,
+				FCE825FE1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */,
 				FC75EC551F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE946491F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B80991F498A2F00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCE826031F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC5A1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
@@ -613,10 +633,12 @@
 				FC48F9AC1F1E7FCD00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A81F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A41F1E7FB400D2400B /* TeslaAPI.swift in Sources */,
+				FCE825FF1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC491F2E068C007ED697 /* RequestProtocol.swift in Sources */,
 				FC75EC561F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE9464A1F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B809A1F498A3000D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCE826041F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5051F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC5B1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
@@ -657,10 +679,12 @@
 				FC48F9AF1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC99DFD31F1FB41400013FE9 /* Token.swift in Sources */,
 				FC48F9AB1F1E7FBB00D2400B /* WebRequest.swift in Sources */,
+				FCE825FC1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */,
 				FCE946471F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC75EC531F2E4AD7007ED697 /* LockRequest.swift in Sources */,
 				FC1B80971F49883500D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCE826011F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC581F2E613A007ED697 /* OpenChargePortRequest.swift in Sources */,

@@ -17,7 +17,8 @@ struct MobileEnabledForVehicleRequest: RequestProtocol {
     func execute(completion: @escaping (Result<Bool>) -> Void) {
         WebRequest.request(
             path: path,
-            method: method) { response, error in
+            method: method,
+            accessToken: accessToken) { response, error in
                 if let error = error {
                     DispatchQueue.main.async {
                         completion(Result.failure(error))
