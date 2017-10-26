@@ -1,17 +1,17 @@
 import Foundation
 
 public class Vehicle {
-    enum State: String {
+    public enum State: String {
         case online
     }
-    let color: String?
-    let displayName: String?
-    let identifier: Int
-    let optionCodes: [String]
-    let vehicleIdentifier: Int
-    let vin: String
-    let tokens: [String]
-    let state: State
+    public let color: String?
+    public let displayName: String?
+    public let identifier: Int
+    public let optionCodes: [String]
+    public let vehicleIdentifier: Int
+    public let vin: String
+    public let tokens: [String]
+    public let state: State
 
     init?(dictionary: [String: AnyObject]) {
         guard let identifier = dictionary["id"] as? Int,

@@ -2,10 +2,10 @@ import Foundation
 
 public class Token {
     public let accessToken: String
-    let type: String
-    let expires: Date
-    let created: Date
-    let refreshToken: String
+    public let type: String
+    public let expires: Date
+    public let created: Date
+    public let refreshToken: String
 
     init(dictionary: [String: AnyObject]) throws {
         guard let accessToken = dictionary["access_token"] as? String,

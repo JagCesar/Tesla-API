@@ -1,51 +1,51 @@
 import Foundation
 
 public class ChargeState {
-    enum ChargingState: String {
+    public enum ChargingState: String {
         case disconnected = "Disconnected"
     }
 
-    let batteryHeaterOn: Bool?
-    let batteryLevel: Int
-    let batteryRange: Float
-    let chargeCurrentRequest: Int
-    let chargeCurrentRequestMax: Int
-    let chargeEnableRequest: Bool
-    let chargeEnergyAdded: Float
-    let chargeLimitSoc: Int
-    let chargeLimitSocMax: Int
-    let chargeLimitSocMin: Int
-    let chargeLimitSocStd: Int
-    let chargeMilesAddedIdeal: Float
-    let chargeMilesAddedRated: Float
-    let chargePortDoorOpen: Bool
-    let chargePortLatch: String
-    let chargeRate: Int
-    let chargeToMaxRange: Int
-    let chargerActualCurrent: Int
-    let chargerPhases: Int?
-    let chargerPilotCurrent: Int?
-    let chargerPower: Int
-    let chargerVoltage: Int
-    let chargingState: ChargingState
-    let estBatteryRange: Float
-    let euVehicle: Bool
-    let fastChargerPresent: Bool
-    let fastChargerType: String?
-    let idealBatteryRange: Float
-    let managedChargingActive: Bool
-    let managedChargingStartTime: Date?
-    let managedChargingUserCanceled: Bool
-    let maxRangeChargeCounter: Int
-    let motorizedChargePort: Bool
-    let notEnoughPowerToHeat: Bool?
-    let scheduledChargingPending: Bool
-    let scheduledChargingStartTime: Date?
-    let timeToFullCharge: Int
-    let timestamp: Date
-    let tripCharging: Bool
-    let usableBatteryLevel: Int
-    let userChargeEnableRequest: Bool?
+    public let batteryHeaterOn: Bool?
+    public let batteryLevel: Int
+    public let batteryRange: Float
+    public let chargeCurrentRequest: Int
+    public let chargeCurrentRequestMax: Int
+    public let chargeEnableRequest: Bool
+    public let chargeEnergyAdded: Float
+    public let chargeLimitSoc: Int
+    public let chargeLimitSocMax: Int
+    public let chargeLimitSocMin: Int
+    public let chargeLimitSocStd: Int
+    public let chargeMilesAddedIdeal: Float
+    public let chargeMilesAddedRated: Float
+    public let chargePortDoorOpen: Bool
+    public let chargePortLatch: String
+    public let chargeRate: Int
+    public let chargeToMaxRange: Int
+    public let chargerActualCurrent: Int
+    public let chargerPhases: Int?
+    public let chargerPilotCurrent: Int?
+    public let chargerPower: Int
+    public let chargerVoltage: Int
+    public let chargingState: ChargingState
+    public let estBatteryRange: Float
+    public let euVehicle: Bool
+    public let fastChargerPresent: Bool
+    public let fastChargerType: String?
+    public let idealBatteryRange: Float
+    public let managedChargingActive: Bool
+    public let managedChargingStartTime: Date?
+    public let managedChargingUserCanceled: Bool
+    public let maxRangeChargeCounter: Int
+    public let motorizedChargePort: Bool
+    public let notEnoughPowerToHeat: Bool?
+    public let scheduledChargingPending: Bool
+    public let scheduledChargingStartTime: Date?
+    public let timeToFullCharge: Int
+    public let timestamp: Date
+    public let tripCharging: Bool
+    public let usableBatteryLevel: Int
+    public let userChargeEnableRequest: Bool?
 
     init(dictionary: [String: Any]) {
         batteryHeaterOn = dictionary["battery_heater_on"] as? Bool

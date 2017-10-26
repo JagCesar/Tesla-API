@@ -47,6 +47,8 @@
 		FC48F9AD1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
 		FC48F9AE1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
 		FC48F9AF1F1E7FCE00D2400B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD1618F1F1E793F003FE381 /* Vehicle.swift */; };
+		FC6F72E61FA12BB3009BF1C4 /* ChargeStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */; };
+		FC6F72E71FA12BB4009BF1C4 /* ChargeStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */; };
 		FC75EC491F2E068C007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
 		FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
 		FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75EC481F2E0678007ED697 /* RequestProtocol.swift */; };
@@ -652,6 +654,7 @@
 			files = (
 				FC27C98C1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
 				FC27C9831F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
+				FC6F72E61FA12BB3009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
 				FC27C97B1F4993E10064E1AE /* ModelMocks.swift in Sources */,
 				FC27C9861F4995240064E1AE /* LockRequestTests.swift in Sources */,
 				FC27C9891F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
@@ -665,6 +668,7 @@
 			files = (
 				FC27C98D1F4995250064E1AE /* OpenChargePortRequestTests.swift in Sources */,
 				FC27C9841F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
+				FC6F72E71FA12BB4009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
 				FC27C97C1F4993E10064E1AE /* ModelMocks.swift in Sources */,
 				FC27C9871F4995240064E1AE /* LockRequestTests.swift in Sources */,
 				FC27C98A1F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
