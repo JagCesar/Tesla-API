@@ -7,7 +7,7 @@ extension TeslaAPITests {
 
         MobileEnabledForVehicleRequest(
             vehicle: ModelMocks.vehicle,
-            accessToken: TeslaAPITests.accessToken).execute { result in
+            accessToken: accessToken()).execute { result in
                 XCTAssert(Thread.isMainThread)
                 switch result {
                 case .success(_):

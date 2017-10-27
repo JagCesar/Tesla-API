@@ -6,10 +6,10 @@ extension TeslaAPITests {
         let waitExpectation = expectation(description: "List vehicles")
 
         ListVehiclesRequest(
-            accessToken: TeslaAPITests.accessToken).execute { result in
+            accessToken: accessToken()).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
-            case .success(let vehicles):
+            case .success(_):
                 waitExpectation.fulfill()
             case .failure(_):
                 XCTFail()

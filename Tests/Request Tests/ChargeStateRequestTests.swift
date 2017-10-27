@@ -5,8 +5,8 @@ extension TeslaAPITests {
     func testChargeState() {
         let waitExpectation = expectation(description: "Charge state")
         ChargeStateRequest(
-            accessToken: TeslaAPITests.accessToken,
-            vehicleIdentifier: TeslaAPITests.vehicleIdentifier).execute { result in
+            accessToken: accessToken(),
+            vehicleIdentifier: vehicleIdentifier()).execute { result in
                 switch result {
                 case .success(_):
                     waitExpectation.fulfill()
