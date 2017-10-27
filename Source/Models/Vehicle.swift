@@ -6,7 +6,7 @@ public class Vehicle {
     }
     public let color: String?
     public let displayName: String?
-    public let identifier: Int
+    public let identifier: String
     public let optionCodes: [String]
     public let vehicleIdentifier: Int
     public let vin: String
@@ -14,7 +14,7 @@ public class Vehicle {
     public let state: State
 
     init?(dictionary: [String: AnyObject]) {
-        guard let identifier = dictionary["id"] as? Int,
+        guard let identifier = dictionary["id"] as? String,
             let optionCodes = dictionary["option_codes"] as? String,
             let vehicleIdentifier = dictionary["vehicle_id"] as? Int,
             let vin = dictionary["vin"] as? String,

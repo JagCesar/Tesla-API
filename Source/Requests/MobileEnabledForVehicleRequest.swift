@@ -5,7 +5,7 @@ struct MobileEnabledForVehicleRequest: RequestProtocol {
     var path: String {
         return "/api/1/vehicles/\(vehicleIdentifier)/mobile_enabled"
     }
-    let vehicleIdentifier: Int
+    let vehicleIdentifier: String
     let method = WebRequest.RequestMethod.get
     let accessToken: String
 

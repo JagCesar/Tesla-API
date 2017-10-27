@@ -7,9 +7,9 @@ public struct OpenChargePortRequest: RequestProtocol {
     }
     let method = WebRequest.RequestMethod.post
     let accessToken: String
-    let vehicleIdentifier: Int
+    let vehicleIdentifier: String
 
-    public init(accessToken: String, vehicleIdentifier: Int) {
+    public init(accessToken: String, vehicleIdentifier: String) {
         self.accessToken = accessToken
         self.vehicleIdentifier = vehicleIdentifier
     }

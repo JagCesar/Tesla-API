@@ -16,10 +16,10 @@ public struct LockRequest: RequestProtocol {
     }
     let method = WebRequest.RequestMethod.post
     let accessToken: String
-    let vehicleIdentifier: Int
+    let vehicleIdentifier: String
     let state: LockState
 
-    public init(accessToken: String, vehicleIdentifier: Int, state: LockState) {
+    public init(accessToken: String, vehicleIdentifier: String, state: LockState) {
         self.accessToken = accessToken
         self.vehicleIdentifier = vehicleIdentifier
         self.state = state
