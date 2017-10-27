@@ -13,17 +13,6 @@ class TeslaAPITests: XCTestCase {
     static var vehicleIdentifier: Int {
         return 1
     }
-
-    override func setUp() {
-        super.setUp()
-
-        // This if makes sure that we never send any entered username and
-        // password (which might be real credentials) to the mocked backend.
-        if username.utf16.count == 0 && password.utf16.count == 0 {
-            // Set the url to the mocked api available on this URL http://docs.timdorr.apiary.io
-            TeslaAPI.host = "private-anon-99837c6056-timdorr.apiary-mock.com"
-        }
-    }
     
     func test_Login() {
         let waitExpectation = expectation(description: "Sign in")
