@@ -14,7 +14,7 @@ public class Vehicle {
     public let state: State
 
     init?(dictionary: [String: AnyObject]) {
-        guard let identifier = dictionary["id"] as? String,
+        guard let identifierNumber = dictionary["id"] as? NSNumber,
             let optionCodes = dictionary["option_codes"] as? String,
             let vehicleIdentifier = dictionary["vehicle_id"] as? Int,
             let vin = dictionary["vin"] as? String,
@@ -25,7 +25,7 @@ public class Vehicle {
         }
         self.color = dictionary["color"] as? String
         self.displayName = dictionary["display_name"] as? String
-        self.identifier = identifier
+        self.identifier = identifierNumber.stringValue
         self.optionCodes = optionCodes.components(separatedBy: ",")
         self.vehicleIdentifier = vehicleIdentifier
         self.vin = vin
