@@ -4,6 +4,7 @@ public class ChargeState {
     public enum ChargingState: String {
         case disconnected = "Disconnected"
         case charging = "Charging"
+        case complete = "Complete"
     }
 
     public let batteryHeaterOn: Bool?
