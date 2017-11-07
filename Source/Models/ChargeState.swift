@@ -45,7 +45,7 @@ public class ChargeState {
     public let scheduledChargingStartTime: Date?
     public let timeToFullCharge: Double
     public let timestamp: Date
-    public let tripCharging: Bool
+    public let tripCharging: Bool?
     public let usableBatteryLevel: Int
     public let userChargeEnableRequest: Bool?
 
@@ -96,7 +96,7 @@ public class ChargeState {
         }
         timeToFullCharge = dictionary["time_to_full_charge"] as! Double
         timestamp = Date(timeIntervalSince1970: dictionary["timestamp"] as! Double)
-        tripCharging = dictionary["trip_charging"] as! Bool
+        tripCharging = dictionary["trip_charging"] as? Bool
         usableBatteryLevel = dictionary["usable_battery_level"] as! Int
         userChargeEnableRequest = dictionary["user_charge_enable_request"] as? Bool
     }
