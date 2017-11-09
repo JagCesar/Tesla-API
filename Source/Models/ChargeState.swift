@@ -20,7 +20,7 @@ public class ChargeState {
     public let chargeLimitSocStd: Int
     public let chargeMilesAddedIdeal: Double
     public let chargeMilesAddedRated: Double
-    public let chargePortDoorOpen: Bool
+    public let chargePortDoorOpen: Bool?
     public let chargePortLatch: String
     public let chargeRate: Double
     public let chargeToMaxRange: Int
@@ -63,7 +63,7 @@ public class ChargeState {
         chargeLimitSocStd = dictionary["charge_limit_soc_std"] as! Int
         chargeMilesAddedIdeal = dictionary["charge_miles_added_ideal"] as! Double
         chargeMilesAddedRated = dictionary["charge_miles_added_rated"] as! Double
-        chargePortDoorOpen = dictionary["charge_port_door_open"] as! Bool
+        chargePortDoorOpen = dictionary["charge_port_door_open"] as? Bool
         chargePortLatch = dictionary["charge_port_latch"] as! String
         chargeRate = dictionary["charge_rate"] as! Double
         chargeToMaxRange = dictionary["charge_to_max_range"] as! Int
