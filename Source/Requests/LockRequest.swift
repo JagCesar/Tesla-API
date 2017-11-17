@@ -29,19 +29,21 @@ public struct LockRequest: RequestProtocol {
         WebRequest.request(
             path: path,
             method: method,
-            accessToken: accessToken) { response, error in
+            accessToken: accessToken) { data, error in
                 if let error = error {
                     DispatchQueue.main.async {
                         completion(Result.failure(error))
                     }
-                } else if let response = response as? [String: [String: Any]],
-                    let resultBool = response["response"]?["result"] as? Bool {
-                    DispatchQueue.main.async {
-                        completion(Result.success(resultBool))
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        completion(Result.failure(APIError()))
+                } else if let data = data {
+                    do {
+                        let resultResponse = try JSONDecoder().decode(ResultResponse.self, from: data)
+                        DispatchQueue.main.async {
+                            completion(Result.success(resultResponse.response.result))
+                        }
+                    } catch let error {
+                        DispatchQueue.main.async {
+                            completion(Result.failure(error))
+                        }
                     }
                 }
         }

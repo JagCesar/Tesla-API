@@ -26,22 +26,16 @@ public struct AuthenticateRequest: RequestProtocol {
         WebRequest.request(
             path: path,
             method: method,
-            params: params) { response, error in
+            params: params) { data, error in
                 if let error = error {
                     DispatchQueue.main.async {
                         completion(Result.failure(error))
                     }
-                } else {
-                    guard let responseDictionary = response as? [String: AnyObject] else {
-                        DispatchQueue.main.async {
-                            completion(Result.failure(APIError()))
-                        }
-                        return
-                    }
+                } else if let data = data {
                     do {
-                        let result = try Result.success(Token(dictionary: responseDictionary))
+                        let token = try JSONDecoder().decode(Token.self, from: data)
                         DispatchQueue.main.async {
-                            completion(result)
+                            completion(Result.success(token))
                         }
                     } catch let error {
                         DispatchQueue.main.async {

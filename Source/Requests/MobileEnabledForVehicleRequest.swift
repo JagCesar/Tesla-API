@@ -9,8 +9,8 @@ struct MobileEnabledForVehicleRequest: RequestProtocol {
     let method = WebRequest.RequestMethod.get
     let accessToken: String
 
-    init(vehicle: Vehicle, accessToken: String) {
-        self.vehicleIdentifier = vehicle.identifier
+    init(vehicleIdentifier: String, accessToken: String) {
+        self.vehicleIdentifier = vehicleIdentifier
         self.accessToken = accessToken
     }
 
@@ -18,19 +18,21 @@ struct MobileEnabledForVehicleRequest: RequestProtocol {
         WebRequest.request(
             path: path,
             method: method,
-            accessToken: accessToken) { response, error in
+            accessToken: accessToken) { data, error in
                 if let error = error {
                     DispatchQueue.main.async {
                         completion(Result.failure(error))
                     }
-                } else if let response = response as? [String: Bool],
-                    let responseBool = response["response"] {
-                    DispatchQueue.main.async {
-                        completion(Result.success(responseBool))
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        completion(Result.failure(APIError()))
+                } else if let data = data {
+                    do {
+                        let boolResponse = try JSONDecoder().decode(BoolResponse.self, from: data)
+                        DispatchQueue.main.async {
+                            completion(Result.success(boolResponse.response))
+                        }
+                    } catch let error {
+                        DispatchQueue.main.async {
+                            completion(Result.failure(error))
+                        }
                     }
                 }
         }

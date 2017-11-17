@@ -9,9 +9,11 @@ extension TeslaAPITests {
             accessToken: accessToken()).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
-            case .success(_):
+            case .success(let vehicles):
+                print(vehicles)
                 waitExpectation.fulfill()
-            case .failure(_):
+            case .failure(let error):
+                print(error)
                 XCTFail()
             }
         }

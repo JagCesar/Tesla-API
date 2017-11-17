@@ -8,9 +8,11 @@ extension TeslaAPITests {
             accessToken: accessToken(),
             vehicleIdentifier: vehicleIdentifier()).execute { result in
                 switch result {
-                case .success(_):
+                case .success(let chargeState):
+                    print(chargeState)
                     waitExpectation.fulfill()
-                case .failure(_):
+                case .failure(let error):
+                    print(error)
                     XCTFail()
                 }
         }

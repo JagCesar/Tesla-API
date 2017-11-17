@@ -10,9 +10,11 @@ class TeslaAPITests: XCTestCase {
             password: password()).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
-            case .success(_):
+            case .success(let token):
+                print(token)
                 waitExpectation.fulfill()
-            case .failure(_):
+            case .failure(let error):
+                print(error)
                 XCTFail()
             }
         }

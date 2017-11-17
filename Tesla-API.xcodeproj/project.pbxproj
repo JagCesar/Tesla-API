@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0B57441FBF977B00AE4D0B /* BoolResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B57431FBF977B00AE4D0B /* BoolResponses.swift */; };
+		FC0B57451FBF977B00AE4D0B /* BoolResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B57431FBF977B00AE4D0B /* BoolResponses.swift */; };
+		FC0B57461FBF977B00AE4D0B /* BoolResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B57431FBF977B00AE4D0B /* BoolResponses.swift */; };
+		FC0B57471FBF977B00AE4D0B /* BoolResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B57431FBF977B00AE4D0B /* BoolResponses.swift */; };
 		FC1B80971F49883500D24310 /* MobileEnabledForVehicleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */; };
 		FC1B80981F498A2E00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */; };
 		FC1B80991F498A2F00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */; };
@@ -74,6 +78,17 @@
 		FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
 		FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
 		FCD161971F1E79F0003FE381 /* Tesla-API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD161901F1E793F003FE381 /* Tesla-API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCDDDAB41FBF32440076D3ED /* VehicleStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB31FBF32440076D3ED /* VehicleStateRequest.swift */; };
+		FCDDDAB51FBF32440076D3ED /* VehicleStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB31FBF32440076D3ED /* VehicleStateRequest.swift */; };
+		FCDDDAB61FBF32440076D3ED /* VehicleStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB31FBF32440076D3ED /* VehicleStateRequest.swift */; };
+		FCDDDAB71FBF32440076D3ED /* VehicleStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB31FBF32440076D3ED /* VehicleStateRequest.swift */; };
+		FCDDDAB91FBF32B70076D3ED /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB81FBF32B70076D3ED /* VehicleState.swift */; };
+		FCDDDABA1FBF32B70076D3ED /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB81FBF32B70076D3ED /* VehicleState.swift */; };
+		FCDDDABB1FBF32B70076D3ED /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB81FBF32B70076D3ED /* VehicleState.swift */; };
+		FCDDDABC1FBF32B70076D3ED /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDAB81FBF32B70076D3ED /* VehicleState.swift */; };
+		FCDDDABE1FBF342F0076D3ED /* VehicleStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDABD1FBF342F0076D3ED /* VehicleStateRequestTests.swift */; };
+		FCDDDABF1FBF342F0076D3ED /* VehicleStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDABD1FBF342F0076D3ED /* VehicleStateRequestTests.swift */; };
+		FCDDDAC01FBF342F0076D3ED /* VehicleStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDDDABD1FBF342F0076D3ED /* VehicleStateRequestTests.swift */; };
 		FCE825FC1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */; };
 		FCE825FD1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */; };
 		FCE825FE1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */; };
@@ -117,6 +132,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC0B57431FBF977B00AE4D0B /* BoolResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolResponses.swift; sourceTree = "<group>"; };
 		FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileEnabledForVehicleRequest.swift; sourceTree = "<group>"; };
 		FC27C9791F4993E10064E1AE /* ModelMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMocks.swift; sourceTree = "<group>"; };
 		FC27C97E1F4995240064E1AE /* ListVehiclesRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVehiclesRequestTests.swift; sourceTree = "<group>"; };
@@ -143,6 +159,9 @@
 		FCD161921F1E793F003FE381 /* WebRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequest.swift; sourceTree = "<group>"; };
 		FCD161941F1E79C3003FE381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD161951F1E79C3003FE381 /* TeslaAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaAPITests.swift; sourceTree = "<group>"; };
+		FCDDDAB31FBF32440076D3ED /* VehicleStateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleStateRequest.swift; sourceTree = "<group>"; };
+		FCDDDAB81FBF32B70076D3ED /* VehicleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
+		FCDDDABD1FBF342F0076D3ED /* VehicleStateRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleStateRequestTests.swift; sourceTree = "<group>"; };
 		FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeStateRequest.swift; sourceTree = "<group>"; };
 		FCE826001F8C075C00B72C08 /* ChargeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeState.swift; sourceTree = "<group>"; };
 		FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeStateRequestTests.swift; sourceTree = "<group>"; };
@@ -214,6 +233,7 @@
 				FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */,
 				FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */,
 				FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */,
+				FCDDDABD1FBF342F0076D3ED /* VehicleStateRequestTests.swift */,
 			);
 			path = "Request Tests";
 			sourceTree = "<group>";
@@ -253,11 +273,12 @@
 			isa = PBXGroup;
 			children = (
 				FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */,
+				FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */,
 				FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */,
 				FC75EC521F2E4AD7007ED697 /* LockRequest.swift */,
 				FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */,
 				FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */,
-				FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */,
+				FCDDDAB31FBF32440076D3ED /* VehicleStateRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -283,6 +304,8 @@
 				FC99DFD71F1FBBE100013FE9 /* Error.swift */,
 				FC99DFD21F1FB41400013FE9 /* Token.swift */,
 				FCD1618F1F1E793F003FE381 /* Vehicle.swift */,
+				FCDDDAB81FBF32B70076D3ED /* VehicleState.swift */,
+				FC0B57431FBF977B00AE4D0B /* BoolResponses.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -586,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC27C98B1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FCDDDABE1FBF342F0076D3ED /* VehicleStateRequestTests.swift in Sources */,
 				FC27C9821F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A1291FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FCE826061F8C092C00B72C08 /* ChargeStateRequestTests.swift in Sources */,
@@ -605,13 +629,16 @@
 				FC48F9A61F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
 				FCE825FD1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4C1F2E068E007ED697 /* RequestProtocol.swift in Sources */,
+				FC0B57451FBF977B00AE4D0B /* BoolResponses.swift in Sources */,
 				FC75EC541F2E4F2F007ED697 /* LockRequest.swift in Sources */,
 				FCE946481F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B80981F498A2E00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCDDDABA1FBF32B70076D3ED /* VehicleState.swift in Sources */,
 				FCE826021F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC591F2E6219007ED697 /* OpenChargePortRequest.swift in Sources */,
+				FCDDDAB51FBF32440076D3ED /* VehicleStateRequest.swift in Sources */,
 				FC99DFD61F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,13 +652,16 @@
 				FC48F9A51F1E7FB500D2400B /* TeslaAPI.swift in Sources */,
 				FCE825FE1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */,
+				FC0B57461FBF977B00AE4D0B /* BoolResponses.swift in Sources */,
 				FC75EC551F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE946491F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B80991F498A2F00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCDDDABB1FBF32B70076D3ED /* VehicleState.swift in Sources */,
 				FCE826031F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC5A1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
+				FCDDDAB61FBF32440076D3ED /* VehicleStateRequest.swift in Sources */,
 				FC99DFD51F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,13 +675,16 @@
 				FC48F9A41F1E7FB400D2400B /* TeslaAPI.swift in Sources */,
 				FCE825FF1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC491F2E068C007ED697 /* RequestProtocol.swift in Sources */,
+				FC0B57471FBF977B00AE4D0B /* BoolResponses.swift in Sources */,
 				FC75EC561F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE9464A1F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B809A1F498A3000D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCDDDABC1FBF32B70076D3ED /* VehicleState.swift in Sources */,
 				FCE826041F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5051F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC5B1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
+				FCDDDAB71FBF32440076D3ED /* VehicleStateRequest.swift in Sources */,
 				FC99DFD41F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC27C98C1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FCDDDABF1FBF342F0076D3ED /* VehicleStateRequestTests.swift in Sources */,
 				FC27C9831F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A12A1FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FC6F72E61FA12BB3009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
@@ -676,6 +710,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC27C98D1F4995250064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FCDDDAC01FBF342F0076D3ED /* VehicleStateRequestTests.swift in Sources */,
 				FC27C9841F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A12B1FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FC6F72E71FA12BB4009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
@@ -695,13 +730,16 @@
 				FC48F9AB1F1E7FBB00D2400B /* WebRequest.swift in Sources */,
 				FCE825FC1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */,
+				FC0B57441FBF977B00AE4D0B /* BoolResponses.swift in Sources */,
 				FCE946471F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC75EC531F2E4AD7007ED697 /* LockRequest.swift in Sources */,
 				FC1B80971F49883500D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
+				FCDDDAB91FBF32B70076D3ED /* VehicleState.swift in Sources */,
 				FCE826011F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */,
 				FC75EC581F2E613A007ED697 /* OpenChargePortRequest.swift in Sources */,
+				FCDDDAB41FBF32440076D3ED /* VehicleStateRequest.swift in Sources */,
 				FC48F9A71F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,7 +773,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "se.jagcesar.TeslaAPI-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -748,7 +785,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "se.jagcesar.TeslaAPI-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -1072,7 +1108,6 @@
 				PRODUCT_NAME = TeslaAPI;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1093,7 +1128,6 @@
 				PRODUCT_NAME = TeslaAPI;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

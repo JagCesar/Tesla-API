@@ -1,35 +1,31 @@
 import Foundation
 
-public class Vehicle {
-    public enum State: String {
-        case online
-    }
+public class VehicleResponse: Codable {
+    let response: [Vehicle]
+}
+
+public class Vehicle: Codable {
+//    public enum State: String {
+//        case online
+//    }
     public let color: String?
     public let displayName: String?
-    public let identifier: String
-    public let optionCodes: [String]
+    public let identifier: Int
+    public let optionCodes: String
     public let vehicleIdentifier: Int
     public let vin: String
     public let tokens: [String]
-    public let state: State
+//    public let state: State
 
-    init?(dictionary: [String: AnyObject]) {
-        guard let identifierNumber = dictionary["id"] as? NSNumber,
-            let optionCodes = dictionary["option_codes"] as? String,
-            let vehicleIdentifier = dictionary["vehicle_id"] as? Int,
-            let vin = dictionary["vin"] as? String,
-            let tokens = dictionary["tokens"] as? [String],
-            let stateString = dictionary["state"] as? String,
-            let state = State(rawValue: stateString) else {
-                return nil
-        }
-        self.color = dictionary["color"] as? String
-        self.displayName = dictionary["display_name"] as? String
-        self.identifier = identifierNumber.stringValue
-        self.optionCodes = optionCodes.components(separatedBy: ",")
-        self.vehicleIdentifier = vehicleIdentifier
-        self.vin = vin
-        self.tokens = tokens
-        self.state = state
+    private enum CodingKeys: String, CodingKey {
+        case color = "color"
+        case displayName = "display_name"
+        case identifier = "id"
+        case optionCodes = "option_codes"
+        case vehicleIdentifier = "vehicle_id"
+        case vin
+        case tokens = "tokens"
+//        case state
     }
 }
+

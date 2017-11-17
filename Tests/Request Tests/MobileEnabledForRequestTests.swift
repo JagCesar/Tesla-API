@@ -6,13 +6,15 @@ extension TeslaAPITests {
         let waitExpectation = expectation(description: "Check if mobile is enabled on vehicle")
 
         MobileEnabledForVehicleRequest(
-            vehicle: ModelMocks.vehicle,
+            vehicleIdentifier: vehicleIdentifier(),
             accessToken: accessToken()).execute { result in
                 XCTAssert(Thread.isMainThread)
                 switch result {
-                case .success(_):
+                case .success(let result):
+                    print(result)
                     waitExpectation.fulfill()
-                case .failure(_):
+                case .failure(let error):
+                    print(error)
                     XCTFail()
                 }
         }

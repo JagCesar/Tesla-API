@@ -11,9 +11,11 @@ extension TeslaAPITests {
             state: .lock).execute { result in
                 XCTAssert(Thread.isMainThread)
                 switch result {
-                case .success(_):
+                case .success(let result):
+                    print(result)
                     waitExpectation.fulfill()
-                case .failure(_):
+                case .failure(let error):
+                    print(error)
                     XCTFail()
                 }
         }
@@ -29,9 +31,11 @@ extension TeslaAPITests {
             state: .unlock).execute { result in
                 XCTAssert(Thread.isMainThread)
                 switch result {
-                case .success(_):
+                case .success(let result):
+                    print(result)
                     waitExpectation.fulfill()
-                case .failure(_):
+                case .failure(let error):
+                    print(error)
                     XCTFail()
                 }
         }

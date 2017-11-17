@@ -18,19 +18,21 @@ public struct ChargeStateRequest: RequestProtocol {
         WebRequest.request(
             path: path,
             method: method,
-            accessToken: accessToken) { response, error in
+            accessToken: accessToken) { data, error in
                 if let error = error {
                     DispatchQueue.main.async {
                         completion(Result.failure(error))
                     }
-                } else if let response = response as? [String: [String: Any]],
-                    let dictionary = response["response"] {
-                    DispatchQueue.main.async {
-                        completion(Result.success(ChargeState(dictionary: dictionary)))
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        completion(Result.failure(APIError()))
+                } else if let data = data {
+                    do {
+                        let chargeStateResponse = try JSONDecoder().decode(ChargeStateResponse.self, from: data)
+                        DispatchQueue.main.async {
+                            completion(Result.success(chargeStateResponse.response))
+                        }
+                    } catch let error {
+                        DispatchQueue.main.async {
+                            completion(Result.failure(error))
+                        }
                     }
                 }
         }

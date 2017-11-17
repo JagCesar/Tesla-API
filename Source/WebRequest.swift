@@ -45,7 +45,7 @@ class WebRequest {
         path: String,
         method: RequestMethod,
         params: [String: AnyObject]? = nil, accessToken: String? = nil,
-        completion: @escaping (_ response: AnyObject?, _ error: Error?) -> Void) {
+        completion: @escaping (_ response: Data?, _ error: Error?) -> Void) {
         dataTask(
             request: clientURLRequest(
                 path: path,
@@ -58,22 +58,13 @@ class WebRequest {
     static private func dataTask(
         request: URLRequest,
         method: RequestMethod,
-        completion: @escaping (_ response: AnyObject?, _ error: Error?) -> Void) {
+        completion: @escaping (_ response: Data?, _ error: Error?) -> Void) {
         var request = request
         request.httpMethod = method.rawValue
         let session = URLSession(configuration: URLSessionConfiguration.default)
 
         let task = session.dataTask(with: request as URLRequest) { data, response, error -> Void in
-            if let error = error {
-                completion(nil, error)
-                return
-            }
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                completion(json as AnyObject, nil)
-            } catch let error {
-                completion(nil, error)
-            }
+            completion(data, error)
         }
         task.resume()
     }

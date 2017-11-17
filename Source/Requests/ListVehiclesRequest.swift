@@ -14,21 +14,21 @@ public struct ListVehiclesRequest: RequestProtocol {
         WebRequest.request(
             path: path,
             method: method,
-            accessToken: accessToken) { response, error in
+            accessToken: accessToken) { data, error in
                 if let error = error {
                     DispatchQueue.main.async {
                         completion(Result.failure(error))
                     }
-                } else {
-                    guard let responseArray = response?["response"] as? [[String: AnyObject]] else {
+                } else if let data = data {
+                    do {
+                        let vehicleResponse = try JSONDecoder().decode(VehicleResponse.self, from: data)
                         DispatchQueue.main.async {
-                            completion(Result.failure(APIError()))
+                            completion(Result.success(vehicleResponse.response))
                         }
-                        return
-                    }
-                    let vehicles = responseArray.flatMap { return Vehicle(dictionary: $0) }
-                    DispatchQueue.main.async {
-                        completion(Result.success(vehicles))
+                    } catch let error {
+                        DispatchQueue.main.async {
+                            completion(Result.failure(error))
+                        }
                     }
                 }
         }
