@@ -29,12 +29,22 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FC48F9171F1E7B6200D2400B"
                BuildableName = "TeslaAPI_iOS_Tests.xctest"
                BlueprintName = "TeslaAPI_iOS_Tests"
+               ReferencedContainer = "container:Tesla-API.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FCE31674205E3284004EF4B0"
+               BuildableName = "TeslaAPITestsEmpty.xctest"
+               BlueprintName = "TeslaAPITestsEmpty"
                ReferencedContainer = "container:Tesla-API.xcodeproj">
             </BuildableReference>
          </TestableReference>
