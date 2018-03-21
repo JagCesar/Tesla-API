@@ -58,7 +58,7 @@ final class WebRequest {
         request.httpMethod = method.rawValue
         let session = URLSession(configuration: .default)
 
-        let task = session.dataTask(with: request) { data, response, error -> Void in
+        let task = session.dataTask(with: request) { data, _, error -> Void in
             if let error = error {
                 completion(nil, error)
                 return
