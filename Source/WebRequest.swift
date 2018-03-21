@@ -20,8 +20,8 @@ final class WebRequest {
         var request = URLRequest(url: components.url!)
 
         let bodyString = params.flatMap { args -> String? in
-            guard let escapedKey = args.key.percentageEncoded else { return nil }
-            guard let escapedValue = args.value.percentageEncoded else { return nil }
+            guard let escapedKey = args.key.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
+            guard let escapedValue = args.value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
             return escapedKey + "=" + escapedValue
         }.joined(separator: "&")
 
@@ -58,7 +58,7 @@ final class WebRequest {
         request.httpMethod = method.rawValue
         let session = URLSession(configuration: .default)
 
-        let task = session.dataTask(with: request) { data, _, error -> Void in
+        let task = session.dataTask(with: request) { data, response, error -> Void in
             if let error = error {
                 completion(nil, error)
                 return
