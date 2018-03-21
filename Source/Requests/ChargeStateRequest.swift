@@ -19,17 +19,13 @@ public struct ChargeStateRequest: RequestProtocol {
             path: path,
             method: method,
             accessToken: accessToken) { response, error in
-                if let error = error {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if let error = error {
                         completion(Result.failure(error))
-                    }
-                } else if let response = response as? [String: [String: Any]],
-                    let dictionary = response["response"] {
-                    DispatchQueue.main.async {
+                    } else if let response = response as? [String: [String: Any]],
+                        let dictionary = response["response"] {
                         completion(Result.success(ChargeState(dictionary: dictionary)))
-                    }
-                } else {
-                    DispatchQueue.main.async {
+                    } else {
                         completion(Result.failure(APIError()))
                     }
                 }

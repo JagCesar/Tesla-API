@@ -15,19 +15,15 @@ public struct ListVehiclesRequest: RequestProtocol {
             path: path,
             method: method,
             accessToken: accessToken) { response, error in
-                if let error = error {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if let error = error {
                         completion(Result.failure(error))
-                    }
-                } else {
-                    guard let responseArray = response?["response"] as? [[String: AnyObject]] else {
-                        DispatchQueue.main.async {
+                    } else {
+                        guard let responseArray = response?["response"] as? [[String: AnyObject]] else {
                             completion(Result.failure(APIError()))
+                            return
                         }
-                        return
-                    }
-                    let vehicles = responseArray.compactMap { return Vehicle(dictionary: $0) }
-                    DispatchQueue.main.async {
+                        let vehicles = responseArray.flatMap { return Vehicle(dictionary: $0) }
                         completion(Result.success(vehicles))
                     }
                 }

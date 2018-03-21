@@ -16,35 +16,29 @@ public struct AuthenticateRequest: RequestProtocol {
     }
 
     public func execute(completion: @escaping (Result<Token>) -> Void) {
-        let params: [String: AnyObject] = [
-            "email": username as NSString,
-            "password": password as NSString,
-            "grant_type": grantType as NSString,
-            "client_id": clientIdentifier as NSString,
-            "client_secret": clientSecret as NSString
-            ]
+        let params = [
+            "email": username,
+            "password": password,
+            "grant_type": grantType,
+            "client_id": clientIdentifier,
+            "client_secret": clientSecret
+        ]
         WebRequest.request(
             path: path,
             method: method,
             params: params) { response, error in
-                if let error = error {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if let error = error {
                         completion(Result.failure(error))
-                    }
-                } else {
-                    guard let responseDictionary = response as? [String: AnyObject] else {
-                        DispatchQueue.main.async {
+                    } else {
+                        guard let responseDictionary = response as? [String: AnyObject] else {
                             completion(Result.failure(APIError()))
+                            return
                         }
-                        return
-                    }
-                    do {
-                        let result = try Result.success(Token(dictionary: responseDictionary))
-                        DispatchQueue.main.async {
+                        do {
+                            let result = try Result.success(Token(dictionary: responseDictionary))
                             completion(result)
-                        }
-                    } catch let error {
-                        DispatchQueue.main.async {
+                        } catch {
                             completion(Result.failure(error))
                         }
                     }

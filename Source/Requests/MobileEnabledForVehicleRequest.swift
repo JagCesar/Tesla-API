@@ -19,17 +19,13 @@ struct MobileEnabledForVehicleRequest: RequestProtocol {
             path: path,
             method: method,
             accessToken: accessToken) { response, error in
-                if let error = error {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if let error = error {
                         completion(Result.failure(error))
-                    }
-                } else if let response = response as? [String: Bool],
-                    let responseBool = response["response"] {
-                    DispatchQueue.main.async {
+                    } else if let response = response as? [String: Bool],
+                        let responseBool = response["response"] {
                         completion(Result.success(responseBool))
-                    }
-                } else {
-                    DispatchQueue.main.async {
+                    } else {
                         completion(Result.failure(APIError()))
                     }
                 }
