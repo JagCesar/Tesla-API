@@ -19,17 +19,13 @@ public struct OpenChargePortRequest: RequestProtocol {
             path: path,
             method: method,
             accessToken: accessToken) { response, error in
-                if let error = error {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if let error = error {
                         completion(Result.failure(error))
-                    }
-                } else if let response = response as? [String: [String: Any]],
-                    let resultBool = response["response"]?["result"] as? Bool {
-                    DispatchQueue.main.async {
+                    } else if let response = response as? [String: [String: Any]],
+                        let resultBool = response["response"]?["result"] as? Bool {
                         completion(Result.success(resultBool))
-                    }
-                } else {
-                    DispatchQueue.main.async {
+                    } else {
                         completion(Result.failure(APIError()))
                     }
                 }
