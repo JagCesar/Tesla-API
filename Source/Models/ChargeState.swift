@@ -31,7 +31,7 @@ public class ChargeState {
     public let chargerVoltage: Int
     public let chargingState: ChargingState
     public let estBatteryRange: Double
-    public let euVehicle: Bool
+    public let euVehicle: Bool?
     public let fastChargerPresent: Bool
     public let fastChargerType: String?
     public let idealBatteryRange: Double
@@ -39,7 +39,7 @@ public class ChargeState {
     public let managedChargingStartTime: Date?
     public let managedChargingUserCanceled: Bool
     public let maxRangeChargeCounter: Int
-    public let motorizedChargePort: Bool
+    public let motorizedChargePort: Bool?
     public let notEnoughPowerToHeat: Bool?
     public let scheduledChargingPending: Bool
     public let scheduledChargingStartTime: Date?
@@ -74,7 +74,7 @@ public class ChargeState {
         chargerVoltage = dictionary["charger_voltage"] as! Int
         chargingState = ChargingState(rawValue: dictionary["charging_state"] as! String)!
         estBatteryRange = dictionary["est_battery_range"] as! Double
-        euVehicle = dictionary["eu_vehicle"] as! Bool
+        euVehicle = dictionary["eu_vehicle"] as? Bool
         fastChargerPresent = dictionary["fast_charger_present"] as! Bool
         fastChargerType = dictionary["fast_charger_type"] as? String
         idealBatteryRange = dictionary["ideal_battery_range"] as! Double
@@ -86,7 +86,7 @@ public class ChargeState {
         }
         managedChargingUserCanceled = dictionary["managed_charging_user_canceled"] as! Bool
         maxRangeChargeCounter = dictionary["max_range_charge_counter"] as! Int
-        motorizedChargePort = dictionary["motorized_charge_port"] as! Bool
+        motorizedChargePort = dictionary["motorized_charge_port"] as? Bool
         notEnoughPowerToHeat = dictionary["not_enough_power_to_heat"] as? Bool
         scheduledChargingPending = dictionary["scheduled_charging_pending"] as! Bool
         if let timestamp = dictionary["scheduled_charging_start_time"] as? Double {
