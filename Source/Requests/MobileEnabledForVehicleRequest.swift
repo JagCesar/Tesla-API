@@ -25,7 +25,9 @@ struct MobileEnabledForVehicleRequest: RequestProtocol {
                     }
                 } else if let data = data {
                     do {
-                        let boolResponse = try JSONDecoder().decode(BoolResponse.self, from: data)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let boolResponse = try decoder.decode(BoolResponse.self, from: data)
                         DispatchQueue.main.async {
                             completion(Result.success(boolResponse.response))
                         }

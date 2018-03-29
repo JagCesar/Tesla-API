@@ -21,7 +21,9 @@ public struct ListVehiclesRequest: RequestProtocol {
                     }
                 } else if let data = data {
                     do {
-                        let vehicleResponse = try JSONDecoder().decode(VehicleResponse.self, from: data)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let vehicleResponse = try decoder.decode(VehicleResponse.self, from: data)
                         DispatchQueue.main.async {
                             completion(Result.success(vehicleResponse.response))
                         }

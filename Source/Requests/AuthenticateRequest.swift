@@ -33,7 +33,9 @@ public struct AuthenticateRequest: RequestProtocol {
                     }
                 } else if let data = data {
                     do {
-                        let token = try JSONDecoder().decode(Token.self, from: data)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let token = try decoder.decode(Token.self, from: data)
                         DispatchQueue.main.async {
                             completion(Result.success(token))
                         }

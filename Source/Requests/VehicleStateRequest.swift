@@ -22,6 +22,7 @@ public struct VehicleStateRequest: RequestProtocol {
                     //                    VehicleStateRequest.printStruct(dict: response)
                     do {
                         let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
                         let vehicleStateResponse = try decoder.decode(VehicleStateResponse.self, from: data)
                         DispatchQueue.main.async {
                             completion(Result.success(vehicleStateResponse.response))

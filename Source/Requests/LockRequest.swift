@@ -36,7 +36,9 @@ public struct LockRequest: RequestProtocol {
                     }
                 } else if let data = data {
                     do {
-                        let resultResponse = try JSONDecoder().decode(ResultResponse.self, from: data)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let resultResponse = try decoder.decode(ResultResponse.self, from: data)
                         DispatchQueue.main.async {
                             completion(Result.success(resultResponse.response.result))
                         }

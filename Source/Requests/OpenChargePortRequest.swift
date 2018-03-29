@@ -25,7 +25,9 @@ public struct OpenChargePortRequest: RequestProtocol {
                     }
                 } else if let data = data {
                     do {
-                        let result = try JSONDecoder().decode(ResultResponse.self, from: data)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let result = try decoder.decode(ResultResponse.self, from: data)
                         DispatchQueue.main.async {
                             completion(Result.success(result.response.result))
                         }

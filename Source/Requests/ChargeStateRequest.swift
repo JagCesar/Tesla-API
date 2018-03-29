@@ -25,7 +25,9 @@ public struct ChargeStateRequest: RequestProtocol {
                     }
                 } else if let data = data {
                     do {
-                        let chargeStateResponse = try JSONDecoder().decode(ChargeStateResponse.self, from: data)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        let chargeStateResponse = try decoder.decode(ChargeStateResponse.self, from: data)
                         DispatchQueue.main.async {
                             completion(Result.success(chargeStateResponse.response))
                         }
