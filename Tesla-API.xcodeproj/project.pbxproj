@@ -73,6 +73,17 @@
 		FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
 		FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
 		FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC99DFD71F1FBBE100013FE9 /* Error.swift */; };
+		FCB9328220FB913700D19874 /* ClimateStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328120FB913700D19874 /* ClimateStateRequest.swift */; };
+		FCB9328320FB913700D19874 /* ClimateStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328120FB913700D19874 /* ClimateStateRequest.swift */; };
+		FCB9328420FB913700D19874 /* ClimateStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328120FB913700D19874 /* ClimateStateRequest.swift */; };
+		FCB9328520FB913700D19874 /* ClimateStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328120FB913700D19874 /* ClimateStateRequest.swift */; };
+		FCB9328720FB917F00D19874 /* ClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328620FB917F00D19874 /* ClimateState.swift */; };
+		FCB9328820FB917F00D19874 /* ClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328620FB917F00D19874 /* ClimateState.swift */; };
+		FCB9328920FB917F00D19874 /* ClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328620FB917F00D19874 /* ClimateState.swift */; };
+		FCB9328A20FB917F00D19874 /* ClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328620FB917F00D19874 /* ClimateState.swift */; };
+		FCB9328C20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */; };
+		FCB9328D20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */; };
+		FCB9328E20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */; };
 		FCD161971F1E79F0003FE381 /* Tesla-API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD161901F1E793F003FE381 /* Tesla-API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCE31678205E3284004EF4B0 /* TeslaAPITestsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE31677205E3284004EF4B0 /* TeslaAPITestsEmpty.swift */; };
 		FCE3167A205E3284004EF4B0 /* TeslaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD1615D1F1E7844003FE381 /* TeslaAPI.framework */; };
@@ -144,6 +155,9 @@
 		FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVehiclesRequest.swift; sourceTree = "<group>"; };
 		FC99DFD21F1FB41400013FE9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		FC99DFD71F1FBBE100013FE9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		FCB9328120FB913700D19874 /* ClimateStateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateStateRequest.swift; sourceTree = "<group>"; };
+		FCB9328620FB917F00D19874 /* ClimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateState.swift; sourceTree = "<group>"; };
+		FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateStateRequestTests.swift; sourceTree = "<group>"; };
 		FCD1615D1F1E7844003FE381 /* TeslaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD1618D1F1E793F003FE381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD1618F1F1E793F003FE381 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
@@ -229,11 +243,12 @@
 		FC27C97D1F4995070064E1AE /* Request Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */,
+				FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */,
 				FC27C97E1F4995240064E1AE /* ListVehiclesRequestTests.swift */,
 				FC27C97F1F4995240064E1AE /* LockRequestTests.swift */,
 				FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */,
 				FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */,
-				FCE826051F8C092C00B72C08 /* ChargeStateRequestTests.swift */,
 			);
 			path = "Request Tests";
 			sourceTree = "<group>";
@@ -275,11 +290,12 @@
 			isa = PBXGroup;
 			children = (
 				FCE946461F2CF10E004913FC /* AuthenticateRequest.swift */,
+				FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */,
+				FCB9328120FB913700D19874 /* ClimateStateRequest.swift */,
 				FC80D5011F2CE6FD0013F6DF /* ListVehiclesRequest.swift */,
 				FC75EC521F2E4AD7007ED697 /* LockRequest.swift */,
 				FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */,
 				FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */,
-				FCE825FB1F8C068F00B72C08 /* ChargeStateRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -302,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				FCE826001F8C075C00B72C08 /* ChargeState.swift */,
+				FCB9328620FB917F00D19874 /* ClimateState.swift */,
 				FC99DFD71F1FBBE100013FE9 /* Error.swift */,
 				FC99DFD21F1FB41400013FE9 /* Token.swift */,
 				FCD1618F1F1E793F003FE381 /* Vehicle.swift */,
@@ -647,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC27C98B1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FCB9328C20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */,
 				FC27C9821F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A1291FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FCE826061F8C092C00B72C08 /* ChargeStateRequestTests.swift in Sources */,
@@ -664,8 +682,10 @@
 				FC48F9AE1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9AA1F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A61F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
+				FCB9328820FB917F00D19874 /* ClimateState.swift in Sources */,
 				FCE825FD1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4C1F2E068E007ED697 /* RequestProtocol.swift in Sources */,
+				FCB9328320FB913700D19874 /* ClimateStateRequest.swift in Sources */,
 				FC75EC541F2E4F2F007ED697 /* LockRequest.swift in Sources */,
 				FCE946481F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B80981F498A2E00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
@@ -684,8 +704,10 @@
 				FC48F9AD1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A91F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A51F1E7FB500D2400B /* TeslaAPI.swift in Sources */,
+				FCB9328920FB917F00D19874 /* ClimateState.swift in Sources */,
 				FCE825FE1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4A1F2E068C007ED697 /* RequestProtocol.swift in Sources */,
+				FCB9328420FB913700D19874 /* ClimateStateRequest.swift in Sources */,
 				FC75EC551F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE946491F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B80991F498A2F00D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
@@ -704,8 +726,10 @@
 				FC48F9AC1F1E7FCD00D2400B /* Vehicle.swift in Sources */,
 				FC48F9A81F1E7FBA00D2400B /* WebRequest.swift in Sources */,
 				FC48F9A41F1E7FB400D2400B /* TeslaAPI.swift in Sources */,
+				FCB9328A20FB917F00D19874 /* ClimateState.swift in Sources */,
 				FCE825FF1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC491F2E068C007ED697 /* RequestProtocol.swift in Sources */,
+				FCB9328520FB913700D19874 /* ClimateStateRequest.swift in Sources */,
 				FC75EC561F2E4F30007ED697 /* LockRequest.swift in Sources */,
 				FCE9464A1F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC1B809A1F498A3000D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
@@ -722,6 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC27C98C1F4995240064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FCB9328D20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */,
 				FC27C9831F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A12A1FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FC6F72E61FA12BB3009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
@@ -737,6 +762,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC27C98D1F4995250064E1AE /* OpenChargePortRequestTests.swift in Sources */,
+				FCB9328E20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */,
 				FC27C9841F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A12B1FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FC6F72E71FA12BB4009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
@@ -754,8 +780,10 @@
 				FC48F9AF1F1E7FCE00D2400B /* Vehicle.swift in Sources */,
 				FC99DFD31F1FB41400013FE9 /* Token.swift in Sources */,
 				FC48F9AB1F1E7FBB00D2400B /* WebRequest.swift in Sources */,
+				FCB9328720FB917F00D19874 /* ClimateState.swift in Sources */,
 				FCE825FC1F8C068F00B72C08 /* ChargeStateRequest.swift in Sources */,
 				FC75EC4B1F2E068D007ED697 /* RequestProtocol.swift in Sources */,
+				FCB9328220FB913700D19874 /* ClimateStateRequest.swift in Sources */,
 				FCE946471F2CF10E004913FC /* AuthenticateRequest.swift in Sources */,
 				FC75EC531F2E4AD7007ED697 /* LockRequest.swift in Sources */,
 				FC1B80971F49883500D24310 /* MobileEnabledForVehicleRequest.swift in Sources */,
