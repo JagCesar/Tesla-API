@@ -84,6 +84,13 @@
 		FCB9328C20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */; };
 		FCB9328D20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */; };
 		FCB9328E20FB9B3A00D19874 /* ClimateStateRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */; };
+		FCB9329020FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328F20FBADE700D19874 /* SetTemperaturesRequest.swift */; };
+		FCB9329120FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328F20FBADE700D19874 /* SetTemperaturesRequest.swift */; };
+		FCB9329220FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328F20FBADE700D19874 /* SetTemperaturesRequest.swift */; };
+		FCB9329320FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9328F20FBADE700D19874 /* SetTemperaturesRequest.swift */; };
+		FCB9329520FBB50B00D19874 /* SetTemperaturesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9329420FBB50B00D19874 /* SetTemperaturesRequestTests.swift */; };
+		FCB9329620FBB50B00D19874 /* SetTemperaturesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9329420FBB50B00D19874 /* SetTemperaturesRequestTests.swift */; };
+		FCB9329720FBB50B00D19874 /* SetTemperaturesRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9329420FBB50B00D19874 /* SetTemperaturesRequestTests.swift */; };
 		FCD161971F1E79F0003FE381 /* Tesla-API.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD161901F1E793F003FE381 /* Tesla-API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCE31678205E3284004EF4B0 /* TeslaAPITestsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE31677205E3284004EF4B0 /* TeslaAPITestsEmpty.swift */; };
 		FCE3167A205E3284004EF4B0 /* TeslaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD1615D1F1E7844003FE381 /* TeslaAPI.framework */; };
@@ -158,6 +165,8 @@
 		FCB9328120FB913700D19874 /* ClimateStateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateStateRequest.swift; sourceTree = "<group>"; };
 		FCB9328620FB917F00D19874 /* ClimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateState.swift; sourceTree = "<group>"; };
 		FCB9328B20FB9B3A00D19874 /* ClimateStateRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateStateRequestTests.swift; sourceTree = "<group>"; };
+		FCB9328F20FBADE700D19874 /* SetTemperaturesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTemperaturesRequest.swift; sourceTree = "<group>"; };
+		FCB9329420FBB50B00D19874 /* SetTemperaturesRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTemperaturesRequestTests.swift; sourceTree = "<group>"; };
 		FCD1615D1F1E7844003FE381 /* TeslaAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD1618D1F1E793F003FE381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD1618F1F1E793F003FE381 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
@@ -249,6 +258,7 @@
 				FC27C97F1F4995240064E1AE /* LockRequestTests.swift */,
 				FC27C9801F4995240064E1AE /* MobileEnabledForRequestTests.swift */,
 				FC27C9811F4995240064E1AE /* OpenChargePortRequestTests.swift */,
+				FCB9329420FBB50B00D19874 /* SetTemperaturesRequestTests.swift */,
 			);
 			path = "Request Tests";
 			sourceTree = "<group>";
@@ -296,6 +306,7 @@
 				FC75EC521F2E4AD7007ED697 /* LockRequest.swift */,
 				FC1B80961F49883500D24310 /* MobileEnabledForVehicleRequest.swift */,
 				FC75EC571F2E613A007ED697 /* OpenChargePortRequest.swift */,
+				FCB9328F20FBADE700D19874 /* SetTemperaturesRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -668,6 +679,7 @@
 				FC27C9821F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A1291FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FCE826061F8C092C00B72C08 /* ChargeStateRequestTests.swift in Sources */,
+				FCB9329520FBB50B00D19874 /* SetTemperaturesRequestTests.swift in Sources */,
 				FC27C97A1F4993E10064E1AE /* ModelMocks.swift in Sources */,
 				FC27C9851F4995240064E1AE /* LockRequestTests.swift in Sources */,
 				FC27C9881F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
@@ -692,6 +704,7 @@
 				FCE826021F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5031F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD91F1FBBE100013FE9 /* Error.swift in Sources */,
+				FCB9329120FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */,
 				FC75EC591F2E6219007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC99DFD61F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
@@ -714,6 +727,7 @@
 				FCE826031F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5041F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDA1F1FBBE100013FE9 /* Error.swift in Sources */,
+				FCB9329220FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */,
 				FC75EC5A1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC99DFD51F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
@@ -736,6 +750,7 @@
 				FCE826041F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5051F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFDB1F1FBBE100013FE9 /* Error.swift in Sources */,
+				FCB9329320FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */,
 				FC75EC5B1F2E621A007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC99DFD41F1FB65A00013FE9 /* Token.swift in Sources */,
 			);
@@ -750,6 +765,7 @@
 				FC27C9831F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A12A1FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FC6F72E61FA12BB3009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
+				FCB9329620FBB50B00D19874 /* SetTemperaturesRequestTests.swift in Sources */,
 				FC27C97B1F4993E10064E1AE /* ModelMocks.swift in Sources */,
 				FC27C9861F4995240064E1AE /* LockRequestTests.swift in Sources */,
 				FC27C9891F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
@@ -766,6 +782,7 @@
 				FC27C9841F4995240064E1AE /* ListVehiclesRequestTests.swift in Sources */,
 				FCF2A12B1FA32CE900BA5C3F /* Credentials.swift in Sources */,
 				FC6F72E71FA12BB4009BF1C4 /* ChargeStateRequestTests.swift in Sources */,
+				FCB9329720FBB50B00D19874 /* SetTemperaturesRequestTests.swift in Sources */,
 				FC27C97C1F4993E10064E1AE /* ModelMocks.swift in Sources */,
 				FC27C9871F4995240064E1AE /* LockRequestTests.swift in Sources */,
 				FC27C98A1F4995240064E1AE /* MobileEnabledForRequestTests.swift in Sources */,
@@ -790,6 +807,7 @@
 				FCE826011F8C075C00B72C08 /* ChargeState.swift in Sources */,
 				FC80D5021F2CE6FD0013F6DF /* ListVehiclesRequest.swift in Sources */,
 				FC99DFD81F1FBBE100013FE9 /* Error.swift in Sources */,
+				FCB9329020FBADE700D19874 /* SetTemperaturesRequest.swift in Sources */,
 				FC75EC581F2E613A007ED697 /* OpenChargePortRequest.swift in Sources */,
 				FC48F9A71F1E7FB600D2400B /* TeslaAPI.swift in Sources */,
 			);
