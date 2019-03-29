@@ -26,7 +26,7 @@ public struct ListVehiclesRequest: RequestProtocol {
                         }
                         return
                     }
-                    let vehicles = responseArray.flatMap { return Vehicle(dictionary: $0) }
+                    let vehicles = responseArray.compactMap { return Vehicle(dictionary: $0) }
                     DispatchQueue.main.async {
                         completion(Result.success(vehicles))
                     }
