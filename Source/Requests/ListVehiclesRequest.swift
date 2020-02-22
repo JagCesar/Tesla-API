@@ -23,7 +23,7 @@ public struct ListVehiclesRequest: RequestProtocol {
                             completion(Result.failure(APIError()))
                             return
                         }
-                        let vehicles = responseArray.flatMap { return Vehicle(dictionary: $0) }
+                        let vehicles = responseArray.compactMap { return Vehicle(dictionary: $0) }
                         completion(Result.success(vehicles))
                     }
                 }

@@ -19,7 +19,7 @@ final class WebRequest {
 
         var request = URLRequest(url: components.url!)
 
-        let bodyString = params.flatMap { args -> String? in
+        let bodyString = params.compactMap { args -> String? in
             guard let escapedKey = args.key.percentageEncoded else { return nil }
             guard let escapedValue = args.value.percentageEncoded else { return nil }
             return escapedKey + "=" + escapedValue
