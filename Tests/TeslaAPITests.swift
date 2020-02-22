@@ -5,15 +5,13 @@ class TeslaAPITests: XCTestCase {
     func test_Login() {
         let waitExpectation = expectation(description: "Sign in")
 
-        AuthenticateRequest(
-            username: username(),
-            password: password()).execute { result in
+        AuthenticateRequest(username: username(), password: password()).execute { result in
             XCTAssert(Thread.isMainThread)
             switch result {
-            case .success(_):
+            case .success:
                 waitExpectation.fulfill()
-            case .failure(_):
-                XCTFail()
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
             }
         }
 
