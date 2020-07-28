@@ -1,13 +1,9 @@
 # Tesla API supports 📱 🖥 ⌚ 📺
 
-[![Build Status](https://www.bitrise.io/app/b4c6282d36e95749/status.svg?token=Uko7wcLVPmPuUDLSLr3stg&branch=master)](https://www.bitrise.io/app/b4c6282d36e95749)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Tesla-API](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat)](https://github.com/JagCesar/Tesla-API)
 [![License](https://img.shields.io/badge/license-MIT-AA8DF8.svg?style=flat)](https://github.com/JagCesar/Tesla-API/blob/master/LICENSE)
-[![Language](https://img.shields.io/badge/language-Swift%203-E05C43.svg?style=flat)](https://swift.org)
-[![Twitter](https://img.shields.io/badge/twitter-@JagCesar-00ACED.svg?style=flat)](http://twitter.com/JagCesar)
 
-This is a universal framework that works with
+This is a Swift package that works with
 - iOS
 - macOS
 - watchOS
@@ -19,7 +15,7 @@ It handles the communication with the vehicle API by Tesla and offers an easy to
 
 I want to be a part of the Tesla community and since I have a lot of experience with iOS engineering I decided that this was the best way to contribute.
 
-This framework is and will always be open source. This way you can be sure there isn't anything weird going on under the hood (pun intended). And for furthery safety I will never precompile the framework and attach it to the release tags.
+This framework is and will always be open source. This way you can be sure there isn't anything weird going on under the hood (pun intended). And for further safety I will never precompile the framework and attach it to the release tags.
 
 I hope that open sourcing this will also inspire people to write awesome Tesla apps and help Tesla on their mission.
 
@@ -29,11 +25,7 @@ I want to avoid adding 3rd party dependencies to this project. Having 3rd party 
 
 ## How to get started
 
-The best way to use this code in your project is by using [Carthage](https://github.com/carthage/carthage). If you haven't used [Carthage](https://github.com/carthage/carthage) before, follow the [Readme](https://github.com/Carthage/Carthage/blob/master/README.md) in their repo to get it up and running on your machine.
-
-Once you have [Carthage](https://github.com/carthage/carthage) installed on your machine, add `github "JagCesar/Tesla-API"` to your `Cartfile`.
-
-When you've done this, [follow the instructions](https://github.com/carthage/carthage#getting-started) on how to compile your dependencies and add them to your project.
+The best way to use this code in your project is to add is as a Swift Package dependency. [Check out this tutorial by Apple to get started.](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
 
 ## How to use
 
